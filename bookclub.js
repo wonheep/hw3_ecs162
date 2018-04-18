@@ -5,7 +5,7 @@ function newRequest() {
 	var title = document.getElementById("title").value;
 	title = title.trim();
 	title = title.replace(" ","+");
-
+	
 	var author = document.getElementById("author").value;
 	author = author.trim();
 	author = author.replace(" ","+");
@@ -38,7 +38,7 @@ function newRequest() {
 		}
 
 }	
-	
+
 
 function handleResponse(bookListObj) {
 	var bookList = bookListObj.items;
@@ -46,14 +46,36 @@ function handleResponse(bookListObj) {
 	/* where to put the data on the Web page */ 
 	var bookDisplay = document.getElementById("bookDisplay");
 
-	/* write each title as a new paragraph */
+	/* write each title, author, description, and  as a new paragraph */
 	for (i=0; i<bookList.length; i++) {
 		var book = bookList[i];
+
 		var title = book.volumeInfo.title;
+		var author = book.volumeInfo.authors;
+		var description = book.volumeInfo.description;
+		var images = book.volumeInfo.imageLinks.thumbnail;
+
+		var divPgh = document.createElement("div");
 		var titlePgh = document.createElement("p");
+		var authorPgh = document.createElement("p");
+		var descriptionPgh = document.createElement("p");
+		var imagePgh = document.createElement("img");
+
 		/* ALWAYS AVOID using the innerHTML property */
+		divPgh.setAttribute("class", "each_Div");
 		titlePgh.textContent = title;
-		bookDisplay.append(titlePgh);
+		titlePgh.setAttribute("class", "each_Title");
+		authorPgh.textContent = author;
+		titlePgh.setAttribute("class", "each_Author");
+		descriptionPgh.textContent = description;
+		imagePgh.src = images;
+		imagePgh.setAttribute("alt", "img not found");
+		titlePgh.setAttribute("class", "each_Image");
+
+		bookDisplay.appendChild(divPgh).append(titlePgh);
+		bookDisplay.appendChild(divPgh).append(authorPgh);
+		bookDisplay.appendChild(divPgh).append(descriptionPgh);
+		bookDisplay.appendChild(divPgh).append(imagePgh);
 	}	
 }
 

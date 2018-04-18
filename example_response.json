@@ -1,0 +1,914 @@
+{
+  "kind": "books#volumes",
+  "totalItems": 1221,
+  "items": [
+    {
+      "kind": "books#volume",
+      "id": "Bd_UZAdvUDIC",
+      "etag": "Da1w4Ak5mYE",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/Bd_UZAdvUDIC",
+      "volumeInfo": {
+        "title": "Neuromancer",
+        "authors": [
+          "William Gibson"
+        ],
+        "publisher": "Penguin",
+        "publishedDate": "2000-07-01",
+        "description": "SPECIAL 20TH ANNIVERSARY EDITION—THE MOST IMPORTANT AND INFLUENTIAL SCIENCE FICTION NOVEL OF THE PAST TWO DECADES Twenty years ago, it was as if someone turned on a light. The future blazed into existence with each deliberate word that William Gibson laid down. The winner of Hugo, Nebula, and Philip K. Dick Awards, Neuromancer didn't just explode onto the science fiction scene—it permeated into the collective consciousness, culture, science, and technology. Today, there is only one science fiction masterpiece to thank for the term \"cyberpunk,\" for easing the way into the information age and Internet society. Neuromancer's virtual reality has become real. And yet, William Gibson's gritty, sophisticated vision still manages to inspire the minds that lead mankind ever further into the future. From the Hardcover edition.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781101146460"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "110114646X"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": false
+        },
+        "pageCount": 288,
+        "printType": "BOOK",
+        "categories": [
+          "Fiction"
+        ],
+        "averageRating": 3.0,
+        "ratingsCount": 199,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "1.3.3.0.preview.2",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=Bd_UZAdvUDIC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=Bd_UZAdvUDIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=Bd_UZAdvUDIC&printsec=frontcover&dq=Neuromancer+Gibson&hl=&cd=1&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=Bd_UZAdvUDIC&source=gbs_api",
+        "canonicalVolumeLink": "https://market.android.com/details?id=book-Bd_UZAdvUDIC"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 8.99,
+          "currencyCode": "USD"
+        },
+        "retailPrice": {
+          "amount": 8.99,
+          "currencyCode": "USD"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=Bd_UZAdvUDIC&rdid=book-Bd_UZAdvUDIC&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 8990000.0,
+              "currencyCode": "USD"
+            },
+            "retailPrice": {
+              "amountInMicros": 8990000.0,
+              "currencyCode": "USD"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/Neuromancer-sample-epub.acsm?id=Bd_UZAdvUDIC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=Bd_UZAdvUDIC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Neuromancer was the first fully-realized glimpse of humankind’s digital future—a shocking vision that has challenged our assumptions about technology and ourselves, reinvented the way we speak and think, and forever altered the ..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "FWUODAAAQBAJ",
+      "etag": "MY+O4WDKXuU",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/FWUODAAAQBAJ",
+      "volumeInfo": {
+        "title": "A Study Guide for William Gibson's \"Neuromancer\"",
+        "authors": [
+          "Gale, Cengage Learning"
+        ],
+        "publisher": "Gale, Cengage Learning ",
+        "publishedDate": "2015-09-24",
+        "description": "A Study Guide for William Gibson's \"Neuromancer,\" excerpted from Gale's acclaimed Novels for Students.This concise study guide includes plot summary; character analysis; author biography; study questions; historical context; suggestions for further reading; and much more. For any literature project, trust Novels for Students for all of your research needs.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781410321268"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1410321266"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 15,
+        "printType": "BOOK",
+        "categories": [
+          "Literary Criticism"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "1.3.2.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=FWUODAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=FWUODAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=FWUODAAAQBAJ&printsec=frontcover&dq=Neuromancer+Gibson&hl=&cd=2&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=FWUODAAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://market.android.com/details?id=book-FWUODAAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 3.99,
+          "currencyCode": "USD"
+        },
+        "retailPrice": {
+          "amount": 3.99,
+          "currencyCode": "USD"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=FWUODAAAQBAJ&rdid=book-FWUODAAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 3990000.0,
+              "currencyCode": "USD"
+            },
+            "retailPrice": {
+              "amountInMicros": 3990000.0,
+              "currencyCode": "USD"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/A_Study_Guide_for_William_Gibson_s_Neuro-sample-epub.acsm?id=FWUODAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/A_Study_Guide_for_William_Gibson_s_Neuro-sample-pdf.acsm?id=FWUODAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=FWUODAAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "A Study Guide for William Gibson&#39;s &quot;Neuromancer,&quot; excerpted from Gale&#39;s acclaimed Novels for Students.This concise study guide includes plot summary; character analysis; author biography; study questions; historical context; suggestions for ..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "79aU7KScPwgC",
+      "etag": "C/O8vFEDGIA",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/79aU7KScPwgC",
+      "volumeInfo": {
+        "title": "William Gibson's 'Neuromancer' and the Relation Between Mind and Body",
+        "authors": [
+          "Franz Wegener"
+        ],
+        "publisher": "GRIN Verlag",
+        "publishedDate": "2008-01",
+        "description": "Seminar paper from the year 2002 in the subject English Language and Literature Studies - Literature, grade: 1 (very good), Otto-von-Guericke-University Magdeburg (Institut fur fremdsprachliche Philologien), course: Cyborgs (WS 2001/2002), 4 entries in the bibliography, language: English, comment: This paper is about William Gibson's 'Neuromancer'. Neuromancer was the book that initiated the cyberpunk debate, which was very influential in culture studies. The paper explores Gibson's position towards the mind-body-problem, i.e. the relation between mind and body., abstract: This paper is about William Gibson's famous novel \"Neuromancer.\" Neuromancer was the book that initiated the cyberpunk debate, a debate that was very influential in culture studies and modern literature. The cyberpunk debate created a more suspicious image of new technologies and their effect on the role of the human being as well as the social life and the society. Gibson's position towards the mind-body-problem, i.e. the relation between mind and body, is examined. An overview is given of possible technologies he describes and how they trigger the breakdown between man and machine as well as between individuals. The paper also sketches the effects of those technologies on social interaction, moral values and the structure of the society.\"",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9783638886376"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "3638886379"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 36,
+        "printType": "BOOK",
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "1.1.1.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=79aU7KScPwgC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=79aU7KScPwgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=79aU7KScPwgC&printsec=frontcover&dq=Neuromancer+Gibson&hl=&cd=3&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=79aU7KScPwgC&dq=Neuromancer+Gibson&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/William_Gibson_s_Neuromancer_and_the_Rel.html?hl=&id=79aU7KScPwgC"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=79aU7KScPwgC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Neuromancer was the book that initiated the cyberpunk debate, which was very influential in culture studies."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "tiXfNwAACAAJ",
+      "etag": "iAcLTc3l+EA",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/tiXfNwAACAAJ",
+      "volumeInfo": {
+        "title": "William Gibson's Neuromancer, the Graphic Novel",
+        "authors": [
+          "Tom De Haven",
+          "William Gibson",
+          "Bruce Jensen",
+          "David M. Harris"
+        ],
+        "publisher": "Marvel Enterprises",
+        "publishedDate": "1989",
+        "description": "Science fiction-tegneserie.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0871355744"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780871355744"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 48,
+        "printType": "BOOK",
+        "categories": [
+          "Graphic novels"
+        ],
+        "averageRating": 5.0,
+        "ratingsCount": 1,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=tiXfNwAACAAJ&dq=Neuromancer+Gibson&hl=&cd=4&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=tiXfNwAACAAJ&dq=Neuromancer+Gibson&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/William_Gibson_s_Neuromancer_the_Graphic.html?hl=&id=tiXfNwAACAAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=tiXfNwAACAAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Science fiction-tegneserie."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "9U3OAgAAQBAJ",
+      "etag": "jUdB099GXy0",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/9U3OAgAAQBAJ",
+      "volumeInfo": {
+        "title": "Burning Chrome",
+        "authors": [
+          "William Gibson"
+        ],
+        "publisher": "Harper Collins",
+        "publishedDate": "2014-04-15",
+        "description": "Best-known for his seminal sf novel Neuromancer, William Gibson is actually best when writing short fiction. Tautly-written and suspenseful, Burning Chrome collects 10 of his best short stories with a preface from Bruce Sterling, now available for the first time in trade paperback. These brilliant, high-resolution stories show Gibson's characters and intensely-realized worlds at his absolute best, from the chip-enhanced couriers of \"Johnny Mnemonic\" to the street-tech melancholy of \"Burning Chrome.\"",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780062273017"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0062273019"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": false
+        },
+        "pageCount": 224,
+        "printType": "BOOK",
+        "categories": [
+          "Fiction"
+        ],
+        "averageRating": 4.0,
+        "ratingsCount": 14,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "1.1.1.0.preview.2",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=9U3OAgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=9U3OAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=9U3OAgAAQBAJ&printsec=frontcover&dq=Neuromancer+Gibson&hl=&cd=5&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=9U3OAgAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://market.android.com/details?id=book-9U3OAgAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 9.49,
+          "currencyCode": "USD"
+        },
+        "retailPrice": {
+          "amount": 9.49,
+          "currencyCode": "USD"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=9U3OAgAAQBAJ&rdid=book-9U3OAgAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 9490000.0,
+              "currencyCode": "USD"
+            },
+            "retailPrice": {
+              "amountInMicros": 9490000.0,
+              "currencyCode": "USD"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/Burning_Chrome-sample-epub.acsm?id=9U3OAgAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=9U3OAgAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Tautly-written and suspenseful, Burning Chrome collects 10 of his best short stories with a preface from Bruce Sterling, now available for the first time in trade paperback."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "5GvWmQKLchQC",
+      "etag": "FbvesbjXCnc",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/5GvWmQKLchQC",
+      "volumeInfo": {
+        "title": "Pattern Recognition",
+        "authors": [
+          "William Gibson"
+        ],
+        "publisher": "Penguin UK",
+        "publishedDate": "2004-06-24",
+        "description": "One of the most influential and imaginative writers of the past twenty years turns his attention to London - with dazzling results. Cayce Pollard owes her living to her pathological sensitivity to logos. In London to consult for the world's coolest ad agency, she finds herself catapulted, via her addiction to a mysterious body of fragmentary film footage, uploaded to the Web by a shadowy auteur, into a global quest for this unknown 'garage Kubrick'. Cayce becomes involved with an eccentric hacker, a vengeful ad executive, a defrocked mathematician, a Tokyo Otaku-coven known as Eye of the Dragon and, eventually, the elusive 'Kubrick' himself. William Gibson's new novel is about the eternal mystery of London, the coolest sneakers in the world, and life in (the former) USSR.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780141904467"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0141904461"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": false
+        },
+        "pageCount": 368,
+        "printType": "BOOK",
+        "categories": [
+          "Fiction"
+        ],
+        "averageRating": 3.5,
+        "ratingsCount": 77,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "1.9.9.0.preview.2",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=5GvWmQKLchQC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=5GvWmQKLchQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=5GvWmQKLchQC&printsec=frontcover&dq=Neuromancer+Gibson&hl=&cd=6&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=5GvWmQKLchQC&dq=Neuromancer+Gibson&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Pattern_Recognition.html?hl=&id=5GvWmQKLchQC"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/Pattern_Recognition-sample-epub.acsm?id=5GvWmQKLchQC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=5GvWmQKLchQC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "William Gibson&#39;s new novel is about the eternal mystery of London, the coolest sneakers in the world, and life in (the former) USSR."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "QojrNYyGMyEC",
+      "etag": "ELDJ8aJRRN0",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/QojrNYyGMyEC",
+      "volumeInfo": {
+        "title": "Mona Lisa Overdrive",
+        "authors": [
+          "William Gibson"
+        ],
+        "publisher": "Spectra",
+        "publishedDate": "2012-11-07",
+        "description": "William Gibson, author of the extraordinary multiaward-winning novel Neuromancer, has written his most brilliant and thrilling work to date . . .The Mona Lisa Overdrive. Enter Gibson's unique world--lyric and mechanical, erotic and violent, sobering and exciting--where multinational corporations and high tech outlaws vie for power, traveling into the computer-generated universe known as cyberspace. Into this world comes Mona, a young girl with a murky past and an uncertain future whose life is on a collision course with internationally famous Sense/Net star Angie Mitchell. Since childhood, Angie has been able to tap into cyberspace without a computer. Now, from inside cyberspace, a kidnapping plot is masterminded by a phantom entity who has plans for Mona, Angie, and all humanity, plans that cannot be controlled . . . or even known. And behind the intrigue lurks the shadowy Yazuka, the powerful Japanese underworld, whose leaders ruthlessly manipulate people and events to suit their own purposes . . . or so they think.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780307831194"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0307831191"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": false
+        },
+        "pageCount": 320,
+        "printType": "BOOK",
+        "categories": [
+          "Fiction"
+        ],
+        "averageRating": 4.0,
+        "ratingsCount": 11,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "3.10.8.0.preview.2",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=QojrNYyGMyEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=QojrNYyGMyEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=QojrNYyGMyEC&printsec=frontcover&dq=Neuromancer+Gibson&hl=&cd=7&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=QojrNYyGMyEC&source=gbs_api",
+        "canonicalVolumeLink": "https://market.android.com/details?id=book-QojrNYyGMyEC"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 7.99,
+          "currencyCode": "USD"
+        },
+        "retailPrice": {
+          "amount": 7.99,
+          "currencyCode": "USD"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=QojrNYyGMyEC&rdid=book-QojrNYyGMyEC&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 7990000.0,
+              "currencyCode": "USD"
+            },
+            "retailPrice": {
+              "amountInMicros": 7990000.0,
+              "currencyCode": "USD"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/Mona_Lisa_Overdrive-sample-epub.acsm?id=QojrNYyGMyEC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=QojrNYyGMyEC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "William Gibson, author of the extraordinary multiaward-winning novel Neuromancer, has written his most brilliant and thrilling work to date . . .The Mona Lisa Overdrive."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "r8ezxsszSr0C",
+      "etag": "sa605qbVM2c",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/r8ezxsszSr0C",
+      "volumeInfo": {
+        "title": "Idoru",
+        "authors": [
+          "William Gibson"
+        ],
+        "publisher": "Penguin",
+        "publishedDate": "2003-01-07",
+        "description": "2lst century Tokyo, after the millennial quake. Neon rain. Light everywhere blowing under any door you might try to close. Where the New Buildings, the largest in the world, erect themselves unaided, their slow rippling movements like the contractions of a sea-creature.Colin Laney is here looking for work. He is not, he is careful to point out, a voyeur. He is an intuitive fisher of patterns of information, the \"signature\" a particular individual creates simply by going about the business of living. But Laney knows how to sift for the interesting (read: dangerous) bits. Which makes him very useful--to certain people.Chia McKenzie is here on a rescue mission. She's fourteen. Her idol is the singer Rez, of the band Lo/Rez. When the Seattle chapter of the Lo/Rez fan club decided that he might be in trouble, in Tokyo, they sent Chia to check it out.Rei Toei is the beautiful, entirely virtual media star adored by all Japan. The idoru. And Rez has declared that he will marry her. This is the rumor that brought Chia to Tokyo. But the things that bother Rez are not the things that bother most people. Is something different here, in the very nature of reality? Or is it that something violently New is about to happen? It's possible the idoru is as real as she wants or needs to be--or as real as Rez desires. When Colin Laney looks into her dark eyes, trying hard to think of her as no more than a hologram, he sees things he's never seen before. He sees how she might break a man's heart.And, whatever else may be true, the idoru and the powerful interests surrounding her are enough to put all their lives in danger.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781101158050"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1101158050"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": false
+        },
+        "pageCount": 400,
+        "printType": "BOOK",
+        "categories": [
+          "Fiction"
+        ],
+        "averageRating": 3.5,
+        "ratingsCount": 26,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "0.0.3.0.preview.2",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=r8ezxsszSr0C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=r8ezxsszSr0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=r8ezxsszSr0C&printsec=frontcover&dq=Neuromancer+Gibson&hl=&cd=8&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=r8ezxsszSr0C&source=gbs_api",
+        "canonicalVolumeLink": "https://market.android.com/details?id=book-r8ezxsszSr0C"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 5.99,
+          "currencyCode": "USD"
+        },
+        "retailPrice": {
+          "amount": 5.99,
+          "currencyCode": "USD"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=r8ezxsszSr0C&rdid=book-r8ezxsszSr0C&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 5990000.0,
+              "currencyCode": "USD"
+            },
+            "retailPrice": {
+              "amountInMicros": 5990000.0,
+              "currencyCode": "USD"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/Idoru-sample-epub.acsm?id=r8ezxsszSr0C&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=r8ezxsszSr0C&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Rez has declared that he will marry her. This is the rumor that has brought Chia to Tokyo. True or not, the idoru and the powerful interests surrounding her are enough to put all their lives in danger."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "HHYUGVbVUZYC",
+      "etag": "B6Gokt2oDJA",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/HHYUGVbVUZYC",
+      "volumeInfo": {
+        "title": "Virtual Light",
+        "authors": [
+          "William Gibson"
+        ],
+        "publisher": "Spectra",
+        "publishedDate": "2012-11-21",
+        "description": "2005: Welcome to NoCal and SoCal, the uneasy sister-states of what used to be California. Here the millenium has come and gone, leaving in its wake only stunned survivors. In Los Angeles, Berry Rydell is a former armed-response rentacop now working for a bounty hunter. Chevette Washington is a bicycle messenger turned pickpocket who impulsively snatches a pair of innocent-looking sunglasses. But these are no ordinary shades. What you can see through these high-tech specs can make you rich--or get you killed. Now Berry and Chevette are on the run, zeroing in on the digitalized heart of DatAmerica, where pure information is the greatest high. And a mind can be a terrible thing to crash...",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780307831187"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0307831183"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": false
+        },
+        "pageCount": 368,
+        "printType": "BOOK",
+        "categories": [
+          "Fiction"
+        ],
+        "averageRating": 3.5,
+        "ratingsCount": 20,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "0.4.2.0.preview.2",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=HHYUGVbVUZYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=HHYUGVbVUZYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=HHYUGVbVUZYC&printsec=frontcover&dq=Neuromancer+Gibson&hl=&cd=9&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=HHYUGVbVUZYC&source=gbs_api",
+        "canonicalVolumeLink": "https://market.android.com/details?id=book-HHYUGVbVUZYC"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 7.99,
+          "currencyCode": "USD"
+        },
+        "retailPrice": {
+          "amount": 7.99,
+          "currencyCode": "USD"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=HHYUGVbVUZYC&rdid=book-HHYUGVbVUZYC&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 7990000.0,
+              "currencyCode": "USD"
+            },
+            "retailPrice": {
+              "amountInMicros": 7990000.0,
+              "currencyCode": "USD"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/Virtual_Light-sample-epub.acsm?id=HHYUGVbVUZYC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=HHYUGVbVUZYC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Chevette Washington is a bicycle messenger turned pickpocket who impulsively snatches a pair of innocent-looking sunglasses. But these are no ordinary shades."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "SLaQAwAAQBAJ",
+      "etag": "WoT4DVLiWqA",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/SLaQAwAAQBAJ",
+      "volumeInfo": {
+        "title": "The Peripheral",
+        "authors": [
+          "William Gibson"
+        ],
+        "publisher": "Penguin",
+        "publishedDate": "2014-10-28",
+        "description": "William Gibson returns with his first novel since 2010’s New York Times–bestselling Zero History. Where Flynne and her brother, Burton, live, jobs outside the drug business are rare. Fortunately, Burton has his veteran’s benefits, for neural damage he suffered from implants during his time in the USMC’s elite Haptic Recon force. Then one night Burton has to go out, but there’s a job he’s supposed to do—a job Flynne didn’t know he had. Beta-testing part of a new game, he tells her. The job seems to be simple: work a perimeter around the image of a tower building. Little buglike things turn up. He’s supposed to get in their way, edge them back. That’s all there is to it. He’s offering Flynne a good price to take over for him. What she sees, though, isn’t what Burton told her to expect. It might be a game, but it might also be murder.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780698170704"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0698170709"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": false
+        },
+        "pageCount": 496,
+        "printType": "BOOK",
+        "categories": [
+          "Fiction"
+        ],
+        "averageRating": 4.0,
+        "ratingsCount": 22,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "1.3.3.0.preview.2",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=SLaQAwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=SLaQAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=SLaQAwAAQBAJ&printsec=frontcover&dq=Neuromancer+Gibson&hl=&cd=10&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=SLaQAwAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://market.android.com/details?id=book-SLaQAwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 5.99,
+          "currencyCode": "USD"
+        },
+        "retailPrice": {
+          "amount": 5.99,
+          "currencyCode": "USD"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=SLaQAwAAQBAJ&rdid=book-SLaQAwAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 5990000.0,
+              "currencyCode": "USD"
+            },
+            "retailPrice": {
+              "amountInMicros": 5990000.0,
+              "currencyCode": "USD"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/The_Peripheral-sample-epub.acsm?id=SLaQAwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=SLaQAwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "The New York Times bestselling author of Neuromancer and Zero History presents a fast-paced sci-fi thriller that takes a terrifying look into the future."
+      }
+    }
+  ]
+}

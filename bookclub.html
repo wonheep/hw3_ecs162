@@ -4,35 +4,56 @@
 <title>Make a Book List</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<link rel="stylesheet" type="text/css" href="reset.css">
 <link rel="stylesheet" type="text/css" href="bookclub.css">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> 
 </head>
 
 <body>
 
-<header>
-<h1>Book List</h1>
-</header>
+	<header>
+		<h1>BOOK CLUB</h1>
+	</header>
 
 
-<main>
-Search for a book:
-<br>
-<input id="title" placeholder="title"> <input id="author" placeholder="author">
-<input id="isbn" placeholder="XXXXXXXXXX or XXX-XXXXXXXXXX"> <button onclick="newRequest()">submit</button>
+	<main>
+		Search for a book by ...
+		<br>
+
+		<div class = "main_inputs">
+			<div>
+				<p> Author </p> 
+				<input id="author" placeholder="ex William Shakespeare"> 
+			</div>
+			<p class = "or"> or </p>
+
+			<div>
+				<p> Title </p> 
+				<input id="title" placeholder="ex Romeo and Juliet"> 
+			</div>
+			<p class = "or"> or </p>
+
+			<div>
+				<p> ISBN </p> 
+				<input id="isbn" placeholder="ex 000-0-00-000000-0"> 
+			</div>
+			
+		</div>
+
+		<button id = "searchbutton" onclick="newRequest()">search
+		</button>
+
+		<div id="bookDisplay">
+		</div>
 
 
-<div id="bookDisplay">
-</div>
+	</main>
 
-</main>
+	<!-- The Javascript for this page -->
+	<script src="bookclub.js"> </script>
 
-<!-- The Javascript for this page -->
-<script src="bookclub.js"> </script>
+	<!-- The JSONp request -->
+	<script id = "jsonpCall"> </script>
 
-<!-- The JSONp request -->
-<script id="dummy"></script>  
 
 </body>
 </html>
