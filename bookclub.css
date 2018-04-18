@@ -1,13 +1,12 @@
 
 body {
-	min-height: 100vh;  /* need this line to 
-					tell body to fill viewport */
+	min-height: 100vh; 
 	font-family: 'Montserrat', sans-serif;
 	background-color: white;
 	display: flex;
 	flex-direction: column;
 	color: 	#4F84EE;
-     }
+}
 
 header {
    text-align: center;
@@ -19,7 +18,6 @@ h1 {
    font-size: x-large;
    font-weight: light;
 }
-
 
 main {
      flex: 1 0 auto;  /* the sticky footer trick without the footer */
@@ -40,7 +38,6 @@ input {
 	font-size: medium;
 }
 
-
 p {
 	font-size: medium;
 	margin: 10px;
@@ -60,4 +57,33 @@ p {
     height: 30px;
     width: 80px;
     color: white;
+}
+
+#bookDisplay {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+#bookDisplay p {
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+
+}
+
+.each_Div {
+	background-color: gray;
+	border: 1px;
+	color: black;
+	width: 500px;
+	height: 500px;
+	margin: 10px;
+}
+
+.each_Title {
+	font-weight: 700;
+	font-size: 25px;
 }

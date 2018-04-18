@@ -49,6 +49,7 @@ function handleResponse(bookListObj) {
 	/* write each title, author, description, and  as a new paragraph */
 	for (i=0; i<bookList.length; i++) {
 		var book = bookList[i];
+
 		var title = book.volumeInfo.title;
 		var author = book.volumeInfo.authors;
 		var description = book.volumeInfo.description;
@@ -61,16 +62,20 @@ function handleResponse(bookListObj) {
 		var imagePgh = document.createElement("img");
 
 		/* ALWAYS AVOID using the innerHTML property */
+		divPgh.setAttribute("class", "each_Div");
 		titlePgh.textContent = title;
+		titlePgh.setAttribute("class", "each_Title");
 		authorPgh.textContent = author;
+		titlePgh.setAttribute("class", "each_Author");
 		descriptionPgh.textContent = description;
 		imagePgh.src = images;
 		imagePgh.setAttribute("alt", "img not found");
+		titlePgh.setAttribute("class", "each_Image");
 
-		bookDisplay.append(titlePgh);
-		bookDisplay.append(authorPgh);
-		bookDisplay.append(descriptionPgh);
-		bookDisplay.append(imagePgh);
+		bookDisplay.appendChild(divPgh).append(titlePgh);
+		bookDisplay.appendChild(divPgh).append(authorPgh);
+		bookDisplay.appendChild(divPgh).append(descriptionPgh);
+		bookDisplay.appendChild(divPgh).append(imagePgh);
 	}	
 }
 
