@@ -54,7 +54,7 @@ function handleResponse(bookListObj) {
 		var description = book.volumeInfo.description;
 		var images = book.volumeInfo.imageLinks.thumbnail;
 
-
+		var divPgh = document.createElement("div");
 		var titlePgh = document.createElement("p");
 		var authorPgh = document.createElement("p");
 		var descriptionPgh = document.createElement("p");
@@ -65,7 +65,7 @@ function handleResponse(bookListObj) {
 		authorPgh.textContent = author;
 		descriptionPgh.textContent = description;
 		imagePgh.src = images;
-		imagePgh.setAttribute("alt", "effy");
+		imagePgh.setAttribute("alt", "img not found");
 
 		bookDisplay.append(titlePgh);
 		bookDisplay.append(authorPgh);
