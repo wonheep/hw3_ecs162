@@ -6,7 +6,7 @@ body {
 	background-color: white;
 	display: flex;
 	flex-direction: column;
-	color: blue;
+	color: 	#4F84EE;
      }
 
 header {
@@ -26,6 +26,14 @@ main {
      flex: 1 0 auto;  /* the sticky footer trick without the footer */
 }
 
+.main_inputs {
+	display: flex;
+	flex-direction: row;
+}
+
+.main_inputs div {
+	padding-right: 20px;
+}
 
 input {
 	border-style: solid;
@@ -39,5 +47,18 @@ p {
 	margin: 10px;
 }
 
+.or {
+	padding-top: 35px;
+	padding-right: 20px;
+}
 
-
+#searchbutton {
+    background-color: #4F84EE;
+    font-size: 15px;
+    border: 0;
+    border-radius: 7px;
+    margin-top: 3px;
+    height: 30px;
+    width: 80px;
+    color: white;
+}
