@@ -1,7 +1,6 @@
-# Wayne Thiebaud website (HW2)
+# Book Club Website (HW3)
 
-Authors: Wonhee Park 998938954 | Aditi Cherian 999781728
+Authors: Wonhee Park 998938954 | Wei Hsu 914356691
 
 ### Note
-* Professor Amenta stated that sticky footer was okay
-* Images are in subfolder called `exhibitAssets`
+
