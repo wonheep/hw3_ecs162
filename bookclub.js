@@ -1,5 +1,4 @@
 
-
 function newRequest() {
 
 	var title = document.getElementById("title").value;
@@ -23,6 +22,10 @@ function newRequest() {
 		if (oldScript != null) {
 			document.body.removeChild(oldScript);
 		}
+
+		/* TODO remove old results, remove the entire div with the info
+		as well as the cloned overlay object.*/
+
 		// make a new script element
 		var script = document.createElement('script');
 
@@ -53,6 +56,8 @@ function handleResponse(bookListObj) {
 		var title = book.volumeInfo.title;
 		var author = book.volumeInfo.authors;
 		var description = book.volumeInfo.description;
+
+		//TODO handle cases for thumbnail being undefined
 		var images = book.volumeInfo.imageLinks.thumbnail;
 
 		var divPgh = document.createElement("div");
@@ -63,6 +68,9 @@ function handleResponse(bookListObj) {
 
 		/* ALWAYS AVOID using the innerHTML property */
 		divPgh.setAttribute("class", "each_Div");
+
+		//give unique identifiers to each div. Starts from result0
+		divPgh.id ="result"+idNumberTracker();
 		titlePgh.textContent = title;
 		titlePgh.setAttribute("class", "each_Title");
 		authorPgh.textContent = author;
@@ -72,11 +80,34 @@ function handleResponse(bookListObj) {
 		imagePgh.setAttribute("alt", "img not found");
 		titlePgh.setAttribute("class", "each_Image");
 
+		/*TODO divPgh is evaluated after the click, not during assignment.
+		 all onclicks show the last result currently*/
+		divPgh.onclick= function callShowDivOverlay(){showDivOverlay(divPgh);}
+
 		bookDisplay.appendChild(divPgh).append(titlePgh);
 		bookDisplay.appendChild(divPgh).append(authorPgh);
 		bookDisplay.appendChild(divPgh).append(descriptionPgh);
 		bookDisplay.appendChild(divPgh).append(imagePgh);
 	}	
+}
+
+
+function showDivOverlay(div){
+	var divClone = div.cloneNode(true);
+	document.getElementById("overlay").style.display="flex";
+	document.getElementById("overlay").appendChild(divClone);
+}
+
+function overlayGo(){
+	document.getElementById("overlay").style.display="none";
+}
+
+function idNumberTracker(){
+	if(typeof idNumberTracker.currentId == 'undefined')
+		idNumberTracker.currentId = 0;
+	else
+		idNumberTracker.currentId++;
+	return idNumberTracker.currentId;
 }
 
 
