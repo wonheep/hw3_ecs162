@@ -142,3 +142,11 @@ p {
     width: 80px;
     color: white;
 }
+
+#emptyMessage{
+	color:white;
+	border: 1px;
+	width: 500px;
+	height: 300px;
+	text-align:center;
+}

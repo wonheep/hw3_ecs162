@@ -112,7 +112,7 @@ function handleResponse(bookListObj) {
 
 			/*TODO divPgh is evaluated after the click, not during assignment.
 			 all onclicks show the last result currently*/
-			divPgh.onclick= function callShowDivOverlay(){showDivOverlay(divPgh);}
+			divPgh.onclick= showDivOverlay;
 
 			bookDisplay.appendChild(divPgh).append(titlePgh);
 			bookDisplay.appendChild(divPgh).append(authorPgh);
@@ -135,7 +135,8 @@ function emptyBookList()
 	var lineBreak = document.createElement("br");
 	var another = document.createElement("p");
 
-	msg.textContent = "The book " + globalTitle + " by " + globalAuthor + " or ISBN number " + globalIsbn + " could not be found. "
+	divMsg.id = "emptyMessage";
+	msg.textContent = "The book " + globalTitle.bold() + " by " + globalAuthor.bold() + " or ISBN number " + globalIsbn.bold() + " could not be found. "
 	another.textContent = "Try another search";
 	document.getElementById("overlayInner").appendChild(divMsg).append(msg);
 	document.getElementById("overlayInner").appendChild(divMsg).append(lineBreak);
@@ -144,12 +145,13 @@ function emptyBookList()
 }
 
 /*clone the div clicked and add it into the overlay*/
-function showDivOverlay(div){
+function showDivOverlay(){
 
 	/*remove old overlay node*/
 	var overlayInner = document.getElementById("overlayInner");
 	overlayInner.removeChild(overlayInner.firstChild);
 
+	var div = this;
 	var divClone = div.cloneNode(true);
 	document.getElementById("overlay").style.display="flex";
 	document.getElementById("overlayInner").appendChild(divClone);
