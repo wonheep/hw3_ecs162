@@ -23,8 +23,16 @@ function newRequest() {
 			document.body.removeChild(oldScript);
 		}
 
-		/* TODO remove old results, remove the entire div with the info
-		as well as the cloned overlay object.*/
+		/*removes old search results*/
+		var bookDisplay = document.getElementById("bookDisplay");
+		if(bookDisplay.childElementCount != 0)
+		{
+			while(bookDisplay.firstChild)
+			{
+				bookDisplay.removeChild(bookDisplay.firstChild);
+			}
+		}
+		
 
 		// make a new script element
 		var script = document.createElement('script');
@@ -91,7 +99,7 @@ function handleResponse(bookListObj) {
 	}	
 }
 
-
+/*TODO remove old overlay div node if it exists before showing new one*/
 function showDivOverlay(div){
 	var divClone = div.cloneNode(true);
 	document.getElementById("overlay").style.display="flex";
@@ -109,5 +117,4 @@ function idNumberTracker(){
 		idNumberTracker.currentId++;
 	return idNumberTracker.currentId;
 }
-
 
