@@ -1,20 +1,38 @@
+var globalTitle;
+var globalAuthor;
+var globalIsbn;
 
 function newRequest() {
 
 	var title = document.getElementById("title").value;
 	title = title.trim();
 	title = title.replace(" ","+");
-	
+
+	if(title === "")
+		globalTitle = "Title";
+	else
+		globalTitle = title;
+
 	var author = document.getElementById("author").value;
 	author = author.trim();
 	author = author.replace(" ","+");
+	
+	if(author === "")
+		globalAuthor = "Author";
+	else
+		globalAuthor = author;
 
 	var isbn = document.getElementById("isbn").value;
 	isbn = isbn.trim();
 	isbn = isbn.replace("-","");
 
+	if(isbn === "")
+		globalIsbn = "000-0-00-000000-0";
+	else
+		globalIsbn = isbn;
 
 	var query = ["",title,author,isbn].join("+");
+
 	if (query != "") {
 
 		// remove old script
@@ -58,47 +76,74 @@ function handleResponse(bookListObj) {
 	var bookDisplay = document.getElementById("bookDisplay");
 
 	/* write each title, author, description, and  as a new paragraph */
-	for (i=0; i<bookList.length; i++) {
-		var book = bookList[i];
+	if(typeof bookList == 'undefined')
+		emptyBookList();
+	else{
 
-		var title = book.volumeInfo.title;
-		var author = book.volumeInfo.authors;
-		var description = book.volumeInfo.description;
+		for (i=0; i<bookList.length; i++) {
+			var book = bookList[i];
 
-		//TODO handle cases for thumbnail being undefined
-		var images = book.volumeInfo.imageLinks.thumbnail;
+			var title = book.volumeInfo.title;
+			var author = book.volumeInfo.authors;
+			var description = book.volumeInfo.description;
 
-		var divPgh = document.createElement("div");
-		var titlePgh = document.createElement("p");
-		var authorPgh = document.createElement("p");
-		var descriptionPgh = document.createElement("p");
-		var imagePgh = document.createElement("img");
+			//TODO handle cases for thumbnail being undefined
+			var images = book.volumeInfo.imageLinks.thumbnail;
 
-		/* ALWAYS AVOID using the innerHTML property */
-		divPgh.setAttribute("class", "each_Div");
+			var divPgh = document.createElement("div");
+			var titlePgh = document.createElement("p");
+			var authorPgh = document.createElement("p");
+			var descriptionPgh = document.createElement("p");
+			var imagePgh = document.createElement("img");
 
-		//give unique identifiers to each div. Starts from result0
-		divPgh.id ="result"+idNumberTracker();
-		titlePgh.textContent = title;
-		titlePgh.setAttribute("class", "each_Title");
-		authorPgh.textContent = author;
-		titlePgh.setAttribute("class", "each_Author");
-		descriptionPgh.textContent = description;
-		imagePgh.src = images;
-		imagePgh.setAttribute("alt", "img not found");
-		titlePgh.setAttribute("class", "each_Image");
+			/* ALWAYS AVOID using the innerHTML property */
+			divPgh.setAttribute("class", "each_Div");
 
-		/*TODO divPgh is evaluated after the click, not during assignment.
-		 all onclicks show the last result currently*/
-		divPgh.onclick= function callShowDivOverlay(){showDivOverlay(divPgh);}
+			//give unique identifiers to each div. Starts from result0
+			divPgh.id ="result"+idNumberTracker();
+			titlePgh.textContent = title;
+			titlePgh.setAttribute("class", "each_Title");
+			authorPgh.textContent = author;
+			titlePgh.setAttribute("class", "each_Author");
+			descriptionPgh.textContent = description;
+			imagePgh.src = images;
+			imagePgh.setAttribute("alt", "img not found");
+			titlePgh.setAttribute("class", "each_Image");
 
-		bookDisplay.appendChild(divPgh).append(titlePgh);
-		bookDisplay.appendChild(divPgh).append(authorPgh);
-		bookDisplay.appendChild(divPgh).append(descriptionPgh);
-		bookDisplay.appendChild(divPgh).append(imagePgh);
-	}	
+			/*TODO divPgh is evaluated after the click, not during assignment.
+			 all onclicks show the last result currently*/
+			divPgh.onclick= function callShowDivOverlay(){showDivOverlay(divPgh);}
+
+			bookDisplay.appendChild(divPgh).append(titlePgh);
+			bookDisplay.appendChild(divPgh).append(authorPgh);
+			bookDisplay.appendChild(divPgh).append(descriptionPgh);
+			bookDisplay.appendChild(divPgh).append(imagePgh);
+		}	
+	}
 }
 
+/*display the message for no results found*/
+function emptyBookList()
+{
+	/*remove old overlay node*/
+	var overlayInner = document.getElementById("overlayInner");
+	overlayInner.removeChild(overlayInner.firstChild);
+
+	document.getElementById("overlay").style.display="flex";
+	var divMsg = document.createElement("div");
+	var msg = document.createElement("p");
+	var lineBreak = document.createElement("br");
+	var another = document.createElement("p");
+
+	msg.textContent = "The book " + globalTitle + " by " + globalAuthor + " or ISBN number " + globalIsbn + " could not be found. "
+	another.textContent = "Try another search";
+	document.getElementById("overlayInner").appendChild(divMsg).append(msg);
+	document.getElementById("overlayInner").appendChild(divMsg).append(lineBreak);
+	document.getElementById("overlayInner").appendChild(divMsg).append(another);
+
+}
+
+/*clone the div clicked and add it into the overlay*/
 function showDivOverlay(div){
 
 	/*remove old overlay node*/

@@ -114,3 +114,31 @@ p {
 	text-overflow: ellipsis;
 
 }
+
+#close{
+	position:absolute;
+	top:10px;
+	right:10px;
+}
+
+#searchbutton {
+    background-color: #4F84EE;
+    font-size: 15px;
+    border: 0;
+    border-radius: 7px;
+    margin-top: 3px;
+    height: 30px;
+    width: 80px;
+    color: white;
+}
+
+#keep{
+    background-color: #4F84EE;
+    font-size: 15px;
+    border: 0;
+    border-radius: 7px;
+    margin-top: 3px;
+    height: 30px;
+    width: 80px;
+    color: white;
+}
