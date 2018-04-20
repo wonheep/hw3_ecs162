@@ -1,35 +1,32 @@
-var globalTitle;
-var globalAuthor;
-var globalIsbn;
-
 function newRequest() {
 
 	var title = document.getElementById("title").value;
 	title = title.trim();
 	title = title.replace(" ","+");
 
+  //console.log(inputVars().title);
 	if(title === "")
-		globalTitle = "Title";
+		inputVars.title = "Title";
 	else
-		globalTitle = title;
+		inputVars.title = title;
 
 	var author = document.getElementById("author").value;
 	author = author.trim();
 	author = author.replace(" ","+");
 	
 	if(author === "")
-		globalAuthor = "Author";
+		inputVars.author = "Author";
 	else
-		globalAuthor = author;
+		inputVars.author = author;
 
 	var isbn = document.getElementById("isbn").value;
 	isbn = isbn.trim();
 	isbn = isbn.replace("-","");
 
 	if(isbn === "")
-		globalIsbn = "000-0-00-000000-0";
+		inputVars.isbn = "000-0-00-000000-0";
 	else
-		globalIsbn = isbn;
+		inputVars.isbn = isbn;
 
 	var query = ["",title,author,isbn].join("+");
 
@@ -136,7 +133,9 @@ function emptyBookList()
 	var another = document.createElement("p");
 
 	divMsg.id = "emptyMessage";
-	msg.textContent = "The book " + globalTitle.bold() + " by " + globalAuthor.bold() + " or ISBN number " + globalIsbn.bold() + " could not be found. "
+	
+	/*TODO fix bold of authors,title,isbn*/
+	msg.textContent = "The book " + inputVars.title.bold() + " by " + inputVars.author.bold() + " or ISBN number " + inputVars.isbn.bold() + " could not be found. "
 	another.textContent = "Try another search";
 	document.getElementById("overlayInner").appendChild(divMsg).append(msg);
 	document.getElementById("overlayInner").appendChild(divMsg).append(lineBreak);
@@ -149,7 +148,7 @@ function showDivOverlay(){
 
 	/*remove old overlay node*/
 	var overlayInner = document.getElementById("overlayInner");
-	overlayInner.removeChild(overlayInner.firstChild);
+  overlayInner.removeChild(overlayInner.firstChild);
 
 	var div = this;
 	var divClone = div.cloneNode(true);
@@ -167,4 +166,11 @@ function idNumberTracker(){
 	else
 		idNumberTracker.currentId++;
 	return idNumberTracker.currentId;
+}
+
+/*storing input values without the use of global variables */
+function inputVars(){
+  this.title;
+  this.author;
+  this.isbn;
 }
