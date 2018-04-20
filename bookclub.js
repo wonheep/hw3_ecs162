@@ -99,11 +99,15 @@ function handleResponse(bookListObj) {
 	}	
 }
 
-/*TODO remove old overlay div node if it exists before showing new one*/
 function showDivOverlay(div){
+
+	/*remove old overlay node*/
+	var overlayInner = document.getElementById("overlayInner");
+	overlayInner.removeChild(overlayInner.firstChild);
+
 	var divClone = div.cloneNode(true);
 	document.getElementById("overlay").style.display="flex";
-	document.getElementById("overlay").appendChild(divClone);
+	document.getElementById("overlayInner").appendChild(divClone);
 }
 
 function overlayGo(){
@@ -117,4 +121,3 @@ function idNumberTracker(){
 		idNumberTracker.currentId++;
 	return idNumberTracker.currentId;
 }
-
