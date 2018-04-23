@@ -28,7 +28,7 @@ function newRequest() {
 	else
 		inputVars.isbn = isbn;
 
-	var query = ["",title,author,isbn].join("+");
+	var query = ["",title,author,isbn].reduce(fancyJoin);
 
 	if (query != "") {
 
@@ -117,6 +117,12 @@ function handleResponse(bookListObj) {
 			bookDisplay.appendChild(divPgh).append(imagePgh);
 		}	
 	}
+}
+
+function fancyJoin(a,b) {
+    if (a == "") { return b; }	
+    else if (b == "") { return a; }
+    else { return a+"+"+b; }
 }
 
 /*display the message for no results found*/
