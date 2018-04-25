@@ -132,7 +132,7 @@ p {
     color: white;
 }
 
-#keep{
+#keepButton{
     background-color: #4F84EE;
     font-size: 15px;
     border: 0;
@@ -141,6 +141,18 @@ p {
     height: 30px;
     width: 80px;
     color: white;
+}
+
+#leftButton{
+	position:fixed;
+	top:250px;
+	left:300px;
+}
+
+#rightButton{
+	position:fixed;
+	top:250px;
+	left:950px;
 }
 
 #emptyMessage{

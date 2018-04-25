@@ -4,7 +4,6 @@ function newRequest() {
 	title = title.trim();
 	title = title.replace(" ","+");
 
-  //console.log(inputVars().title);
 	if(title === "")
 		inputVars.title = "Title";
 	else
@@ -37,18 +36,7 @@ function newRequest() {
 		if (oldScript != null) {
 			document.body.removeChild(oldScript);
 		}
-
-		/*removes old search results*/
-		var bookDisplay = document.getElementById("bookDisplay");
-		if(bookDisplay.childElementCount != 0)
-		{
-			while(bookDisplay.firstChild)
-			{
-				bookDisplay.removeChild(bookDisplay.firstChild);
-			}
-		}
 		
-
 		// make a new script element
 		var script = document.createElement('script');
 
@@ -70,7 +58,8 @@ function handleResponse(bookListObj) {
 	var bookList = bookListObj.items;
 
 	/* where to put the data on the Web page */ 
-	var bookDisplay = document.getElementById("bookDisplay");
+	//var bookDisplay = document.getElementById("bookDisplay");
+	var overlayInner = document.getElementById("overlayInner");
 
 	/* write each title, author, description, and  as a new paragraph */
 	if(typeof bookList == 'undefined')
@@ -85,8 +74,9 @@ function handleResponse(bookListObj) {
 			var description = book.volumeInfo.description;
 
 			//TODO handle cases for thumbnail being undefined
+			//if(typeof book.volumeInfo.imagesLinks != 'undefined')
 			var images = book.volumeInfo.imageLinks.thumbnail;
-
+			
 			var divPgh = document.createElement("div");
 			var titlePgh = document.createElement("p");
 			var authorPgh = document.createElement("p");
@@ -96,7 +86,7 @@ function handleResponse(bookListObj) {
 			/* ALWAYS AVOID using the innerHTML property */
 			divPgh.setAttribute("class", "each_Div");
 
-			//give unique identifiers to each div. Starts from result0
+			//give unique identifiers to each div. Starts from result1
 			divPgh.id ="result"+idNumberTracker();
 			titlePgh.textContent = title;
 			titlePgh.setAttribute("class", "each_Title");
@@ -107,15 +97,31 @@ function handleResponse(bookListObj) {
 			imagePgh.setAttribute("alt", "img not found");
 			titlePgh.setAttribute("class", "each_Image");
 
-			/*TODO divPgh is evaluated after the click, not during assignment.
-			 all onclicks show the last result currently*/
-			divPgh.onclick= showDivOverlay;
+			//divPgh.onclick= showDivOverlay;
 
-			bookDisplay.appendChild(divPgh).append(titlePgh);
-			bookDisplay.appendChild(divPgh).append(authorPgh);
-			bookDisplay.appendChild(divPgh).append(descriptionPgh);
-			bookDisplay.appendChild(divPgh).append(imagePgh);
+			overlayInner.appendChild(divPgh).append(titlePgh);
+			overlayInner.appendChild(divPgh).append(authorPgh);
+			overlayInner.appendChild(divPgh).append(descriptionPgh);
+			overlayInner.appendChild(divPgh).append(imagePgh);
+			divPgh.style.display="none";
 		}	
+		/*show first result*/
+		var firstResult = document.getElementById("result1");
+		var keepButton = document.getElementById("keepButton");
+		var leftButton = document.getElementById("leftButton");
+		var rightButton = document.getElementById("rightButton");
+	
+		if(bookList.length == 1)
+			rightButton.style.display="none";
+		else
+		{
+			changeOnClick(rightButton,nextBook,1);
+		}
+		leftButton.style.display="none";
+		firstResult.style.display="block";
+		document.getElementById("overlay").style.display="flex";
+		changeOnClick(keepButton,keepBook,1);
+
 	}
 }
 
@@ -141,7 +147,7 @@ function emptyBookList()
 	divMsg.id = "emptyMessage";
 	
 	/*TODO fix bold of authors,title,isbn*/
-	msg.textContent = "The book " + inputVars.title.bold() + " by " + inputVars.author.bold() + " or ISBN number " + inputVars.isbn.bold() + " could not be found. "
+	msg.textContent = "The book " + inputVars.title + " by " + inputVars.author.bold() + " or ISBN number " + inputVars.isbn.bold() + " could not be found. "
 	another.textContent = "Try another search";
 	document.getElementById("overlayInner").appendChild(divMsg).append(msg);
 	document.getElementById("overlayInner").appendChild(divMsg).append(lineBreak);
@@ -150,9 +156,10 @@ function emptyBookList()
 }
 
 /*clone the div clicked and add it into the overlay*/
+/*
 function showDivOverlay(){
 
-	/*remove old overlay node*/
+	//remove old overlay node
 	var overlayInner = document.getElementById("overlayInner");
   overlayInner.removeChild(overlayInner.firstChild);
 
@@ -161,14 +168,146 @@ function showDivOverlay(){
 	document.getElementById("overlay").style.display="flex";
 	document.getElementById("overlayInner").appendChild(divClone);
 }
+*/
 
+/*resultNumber is the id number of the current book
+  nextbook updates the current tile to the nextbook
+  updates right button to point to book after next book, if exists
+  updates left button to point to current book
+  updates keep button to point to next book*/
+function nextBook(resultNumber)
+{
+
+	var rightButton = document.getElementById("rightButton");
+	var leftButton = document.getElementById("leftButton");
+	var curBookItem = document.getElementById("result"+resultNumber);
+	var nextBookItem = document.getElementById("result"+(resultNumber+1));
+	
+	curBookItem.style.display="none";
+	nextBookItem.style.display="block";
+
+
+	//new right button, no button if nextBook is last item in list
+	if(document.getElementById("overlayInner").childElementCount <= resultNumber+1)
+		rightButton.style.display="none";
+	else
+		changeOnClick(rightButton,nextBook,resultNumber+1);
+
+
+	//new left button
+	leftButton.style.display="block";
+	changeOnClick(leftButton,prevBook,resultNumber+1);
+
+	//new keep button
+	changeOnClick(keepButton,keepBook,resultNumber+1);
+
+}
+
+/*resultNumber is the id number of the current book
+  prevBook updates the current tile to the previous book
+  updates right button to point to current book
+  updates left button to point to book before previous book, if exists
+  updates keep button to point to previous book*/
+function prevBook(resultNumber)
+{
+	var rightButton = document.getElementById("rightButton");
+	var leftButton = document.getElementById("leftButton");
+	var curBookItem = document.getElementById("result"+resultNumber);
+	var prevBookItem = document.getElementById("result"+(resultNumber-1));
+	
+	curBookItem.style.display="none";
+	prevBookItem.style.display="block";
+
+	//new right button
+	rightButton.style.display="block";
+	changeOnClick(rightButton,nextBook,resultNumber-1);
+
+	//new left button
+	if(resultNumber-1 == 1)
+		leftButton.style.display="none";
+	else
+		changeOnClick(leftButton,prevBook,resultNumber-1);
+	//new keep button
+	changeOnClick(keepButton,keepBook,resultNumber-1);
+}
+
+//X button on tile
+function removeTile(){
+
+}
+
+//X button on overlay
 function overlayGo(){
 	document.getElementById("overlay").style.display="none";
+
+	/*removes old search results*/
+	var overlayInner = document.getElementById("overlayInner");
+	if(overlayInner.childElementCount != 0)
+	{
+		while(overlayInner.firstChild)
+		{
+			overlayInner.removeChild(overlayInner.firstChild);
+		}
+	}
+	//reset the result number tracker after keep
+	idNumberTracker.currentId = 0;
 }
+
+function changeOnClick(element,func,param){
+	function noarg(){
+		func(param);
+	}
+	element.onclick = noarg;
+}
+
+function keepBook(resultNumber){
+	var bookDisplay = document.getElementById("bookDisplay");
+	var book = document.getElementById("result"+resultNumber);
+	document.getElementById("overlay").style.display="none";
+	bookDisplay.appendChild(book);
+
+
+	//modify below for overlayInner
+	/*removes old search results*/
+	var overlayInner = document.getElementById("overlayInner");
+	if(overlayInner.childElementCount != 0)
+	{
+		while(overlayInner.firstChild)
+		{
+			overlayInner.removeChild(overlayInner.firstChild);
+		}
+	}
+	//reset the result number tracker after keep
+	idNumberTracker.currentId = 0;
+}
+
+/*
+function keepBook(){
+	
+	var bookDisplay = document.getElementById("bookDisplay");
+	var div = this;
+	var divClone = div.cloneNode(true);
+	document.getElementById("overlay").style.display="none";
+	bookDisplay.appendChild(divClone);
+
+		//removes old search results
+		
+		var bookDisplay = document.getElementById("bookDisplay");
+		if(bookDisplay.childElementCount != 0)
+		{
+			while(bookDisplay.firstChild)
+			{
+				bookDisplay.removeChild(bookDisplay.firstChild);
+			}
+		}
+		
+
+}
+*/
 
 function idNumberTracker(){
 	if(typeof idNumberTracker.currentId == 'undefined')
-		idNumberTracker.currentId = 0;
+		idNumberTracker.currentId = 1;
 	else
 		idNumberTracker.currentId++;
 	return idNumberTracker.currentId;
