@@ -1,63 +1,83 @@
-
 body {
 	min-height: 100vh; 
-	font-family: 'Montserrat', sans-serif;
-	background-color: white;
+	font-family: 'Roboto', sans-serif;
+	background-color: #FFFFFF;
 	display: flex;
 	flex-direction: column;
-	color: 	#4F84EE;
-	background-color:rgb(240,240,240);
+	/*background-color:rgb(240,240,240);*/
+	padding-left: 20px;
 }
-
-header {
-   text-align: center;
-   padding: 10px;  
-}
-
 
 h1 {
-   font-size: x-large;
-   font-weight: light;
+
+   font-size: xx-large;
+   font-weight: 700;
+   color: #4A73FF;
 }
 
 main {
-     flex: 1 0 auto;  /* the sticky footer trick without the footer */
+	align-self: center;
+    flex: 1 0 auto;  /* the sticky footer trick without the footer */
+    padding-top: 20px;
 }
+
+#search_by {
+	font-size: xx-large;
+	font-weight: 300;
+	margin-left: 0px;
+}	
 
 .main_inputs {
 	display: flex;
 	flex-direction: row;
 }
 
+.subtitle {
+	font-size: x-large;
+	color: #4A73FF;
+	font-weight: 300;
+}
+
 .main_inputs div {
-	padding-right: 20px;
+	margin-top: -50px;
+	padding-right: 25px;
 }
 
 input {
+	border-width: 1.6px;
+	border-color: #4A73FF;
+	height: 40px;
+	width: 280px;
 	border-style: solid;
-	border-radius: 5px;
-	font-size: medium;
-}
-
-p {
-	font-size: medium;
-	margin: 10px;
+	border-radius: 10px;
+	font-size: x-large;
+	font-weight: 300;
 }
 
 .or {
-	padding-top: 35px;
-	padding-right: 20px;
+	align-self: center;
+	font-size: x-large;
+	font-weight: 700;
+	color: #4A73FF;
+	margin-top: 35px;
+	margin-left: -10px;
+	margin-right: 15px;
+}
+
+#button_central {
+	text-align: center;
+	margin: 50px;
 }
 
 #searchbutton {
-    background-color: #4F84EE;
-    font-size: 15px;
-    border: 0;
-    border-radius: 7px;
-    margin-top: 3px;
-    height: 30px;
-    width: 80px;
-    color: white;
+	background-color: #4A73FF;
+    font-size: large;
+    font-weight: 300;
+    color: #FFFFFF;
+  	border: 0;
+    border-radius: 10px;
+    height: 40px;
+    width: 110px;
 }
 
 #bookDisplay {
@@ -119,17 +139,6 @@ p {
 	position:absolute;
 	top:10px;
 	right:10px;
-}
-
-#searchbutton {
-    background-color: #4F84EE;
-    font-size: 15px;
-    border: 0;
-    border-radius: 7px;
-    margin-top: 3px;
-    height: 30px;
-    width: 80px;
-    color: white;
 }
 
 #keep{
