@@ -110,11 +110,11 @@ function handleResponse(bookListObj) {
 			/*TODO divPgh is evaluated after the click, not during assignment.
 			 all onclicks show the last result currently*/
 			divPgh.onclick= showDivOverlay;
-
+			bookDisplay.appendChild(divPgh).append(imagePgh);
 			bookDisplay.appendChild(divPgh).append(titlePgh);
 			bookDisplay.appendChild(divPgh).append(authorPgh);
 			bookDisplay.appendChild(divPgh).append(descriptionPgh);
-			bookDisplay.appendChild(divPgh).append(imagePgh);
+			
 		}	
 	}
 }

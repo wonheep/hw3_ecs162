@@ -83,7 +83,7 @@ input {
 #bookDisplay {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
+	flex-wrap: wrap;	
 }
 
 #bookDisplay p {
@@ -95,19 +95,26 @@ input {
 
 }
 
+#bookDisplay .each_Title {
+	font-size: x-large;
+	font-weight: 700;
+}
+
 .each_Div {
 	background-color: white;
 	border: 1px;
 	color: black;
-	width: 500px;
-	height: 500px;
-	margin: 10px;
+	width: 600px;
+	height: 400px;
+	margin: 20px;
 }
 
-.each_Title {
-	font-weight: 700;
-	font-size: 25px;
+.each_Div img {
+	height: 80%;
+	width: auto;
+	padding: 30px;
 }
+
 
 #overlay{
 	position:fixed;
