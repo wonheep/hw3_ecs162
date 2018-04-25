@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <link rel="stylesheet" type="text/css" href="bookclub.css">
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
 </head>
 
 <body>
@@ -28,31 +28,33 @@
 	</div>
 
 	<main>
-		Search for a book by ...
+		<p id = "search_by"> Search for a book by... </p>
 		<br>
 
 		<div class = "main_inputs">
 			<div>
-				<p> Author </p> 
-				<input id="author" placeholder="ex William Shakespeare"> 
+				<p class = "subtitle"> Author </p> 
+				<input id="author" placeholder="  ex William Shakespeare"> 
 			</div>
 			<p class = "or"> or </p>
 
 			<div>
-				<p> Title </p> 
-				<input id="title" placeholder="ex Romeo and Juliet"> 
+				<p class = "subtitle"> Title </p> 
+				<input id="title" placeholder="  ex Romeo and Juliet"> 
 			</div>
 			<p class = "or"> or </p>
 
 			<div>
-				<p> ISBN </p> 
-				<input id="isbn" placeholder="ex 000-0-00-000000-0"> 
+				<p class = "subtitle"> ISBN </p> 
+				<input id="isbn" placeholder="  ex 000-0-00-000000-0"> 
 			</div>
 			
 		</div>
 
-		<button id = "searchbutton" onclick="newRequest()">search
-		</button>
+		<div id = "button_central"> 
+			<button id = "searchbutton" onclick="newRequest()">Search
+			</button>
+		</div>
 
 		<div id="bookDisplay">
 		</div>

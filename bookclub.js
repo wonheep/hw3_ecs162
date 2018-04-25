@@ -104,6 +104,8 @@ function handleResponse(bookListObj) {
 			overlayInner.appendChild(divPgh).append(descriptionPgh);
 			overlayInner.appendChild(divPgh).append(imagePgh);
 			divPgh.style.display="none";
+
+
 		}	
 		/*show first result*/
 		var firstResult = document.getElementById("result1");
