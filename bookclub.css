@@ -92,27 +92,29 @@ input {
 	-webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
 	text-overflow: ellipsis;
+	padding: 10px;
 
-}
-
-#bookDisplay .each_Title {
-	font-size: x-large;
-	font-weight: 700;
 }
 
 .each_Div {
 	background-color: white;
 	border: 1px;
 	color: black;
-	width: 600px;
-	height: 400px;
+	width: 700px;
+	height: 500px;
 	margin: 20px;
+	display: flex;
+	flex-direction: row;
 }
 
 .each_Div img {
-	height: 80%;
-	width: auto;
+	height: auto;
+	width: 50%;
 	padding: 30px;
+}
+
+.each_Div p {
+	font-weight: 300;
 }
 
 
@@ -148,7 +150,7 @@ input {
 	right:10px;
 }
 
-#keep{
+#keepButton{
     background-color: #4F84EE;
     font-size: 15px;
     border: 0;
@@ -157,6 +159,18 @@ input {
     height: 30px;
     width: 80px;
     color: white;
+}
+
+#leftButton{
+	position:fixed;
+	top:250px;
+	left:300px;
+}
+
+#rightButton{
+	position:fixed;
+	top:250px;
+	left:950px;
 }
 
 #emptyMessage{
