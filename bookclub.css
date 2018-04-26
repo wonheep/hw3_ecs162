@@ -95,10 +95,16 @@ input {
 	flex-direction: column;
 }
 
+#bookDisplay {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 0px;
+}
+
 #overlayInner {
 	display: flex;
 	flex-direction: row;
-
 }
 
 .each_Div {
@@ -110,12 +116,14 @@ input {
 	width: 700px;
 	height: 500px;
 	margin: 20px;
-	position: absolute;
+	margin-top: 25%;
+	/*position: absolute;
 	margin: auto;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
+	*/
 }
 
 .each_divimage {
@@ -189,7 +197,7 @@ input {
     border-radius: 10px;
     height: 40px;
     width: 110px;
-    margin-top: 800px;
+    margin-bottom: 0px;
 }
 
 #leftButton{
@@ -233,6 +241,7 @@ input {
 	height: 300px;
 	text-align:center;
 }
+
 
 @media screen and (max-width:480px) {
 

@@ -276,6 +276,7 @@ function keepBook(resultNumber){
 	var bookDisplay = document.getElementById("bookDisplay");
 	var book = document.getElementById("result"+resultNumber);
 	document.getElementById("overlay").style.display="none";
+	book.style.margin = "30px";
 	bookDisplay.appendChild(book);
 
 
