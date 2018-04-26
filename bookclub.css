@@ -141,7 +141,7 @@ input {
 }
 
 .each_divtext {
-	max-height: 40vh;
+	max-height: 300px;
 	width: 60%;
 	padding: 30px;
 	margin-left: -30px;
@@ -150,6 +150,7 @@ input {
 .each_Title {
 	font-size: xx-large;
 	font-weight: 700;
+	margin-top: 0px;
 }
 
 .each_Author {
@@ -167,7 +168,7 @@ input {
 	font-weight: 300;
 	overflow: hidden;
 	display: -webkit-box;
-	-webkit-line-clamp: 6;
+	-webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
 	text-overflow: ellipsis;
 }
