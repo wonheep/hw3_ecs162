@@ -166,6 +166,25 @@ function changeLandingPage(){
 	var searchBy = document.getElementById("search_by");
 	var searchContainer = document.getElementsByClassName("main_inputs");
 	var searchButton = document.getElementById("button_central");
+	var subtitle = document.getElementsByClassName("subtitle");
+	var buttonfinal = document.getElementById("searchbutton");
+	var main_f = document.getElementById("main_f");
+	var overlay = document.getElementById("overlayInner");
+
+	var body = document.getElementsByTagName("body");
+	var header = document.getElementsByTagName("header");
+	var bookdisplay = document.getElementById("bookDisplay");
+
+	body[0].style.backgroundColor =  "#FFFFFF";
+
+	header[0].style.width =  "15%";
+
+	bookDisplay.style.backgroundColor = "#EDEDED";
+	bookDisplay.style.width = "100%";
+	bookDisplay.style.height = "100%";
+	bookDisplay.style.bottom = "0";
+	bookDisplay.style.left = "0";
+	bookDisplay.style.right = "0";
 
 	or[0].style.display="none";
 	or[1].style.display="none";
@@ -173,7 +192,23 @@ function changeLandingPage(){
 	searchContainer[0].style.display="flex";
 	searchContainer[0].style.flexDirection="row";
 	searchContainer[0].style.alignItems="flex-end";
+	searchContainer[0].style.position="absolute";
+	searchContainer[0].style.right="0";
+	searchContainer[0].style.top="0";
+	searchContainer[0].style.marginTop = "20px";
 	searchContainer[0].appendChild(searchButton);
+
+	buttonfinal.style.position = "absolute";
+	buttonfinal.style.right = "0";
+	buttonfinal.style.marginRight = "20px";
+	buttonfinal.style.marginTop = "6px";
+	buttonfinal.style.height = "42px";
+
+
+	subtitle[0].style.marginBottom = "5px";
+	subtitle[1].style.marginBottom = "5px";
+	subtitle[2].style.marginBottom = "5px";
+
 	
 }
 
@@ -318,7 +353,7 @@ function keepBook(resultNumber){
 	book.id="resultM"+uniqueTileTracker();
 	changeOnClick(closeButton,deleteTile,uniqueTileTracker.currentId);
 	document.getElementById("overlay").style.display="none";
-  book.style.margin = "30px";
+    book.style.margin = "10px";
 	bookDisplay.appendChild(book);
 
 	/*removes old search results*/

@@ -113,8 +113,8 @@ input {
 	background-color: white;
 	border: 1px;
 	color: black;
-	width: 700px;
-	height: 500px;
+	width: 600px;
+	height: 400px;
 	margin: 20px;
 	margin-top: 25%;
 	/*position: absolute;
@@ -129,17 +129,17 @@ input {
 .each_divimage {
 	max-height: 44vh;
 	width: 60%;
-	padding: 30px;
+	padding: 28px;
 }
 
 .each_divimage img {
 	width: 100%;
-	max-height: 44vh;
+	max-height: 35vh;
 
 }
 
 .each_divtext {
-	max-height: 44vh;
+	max-height: 40vh;
 	width: 60%;
 	padding: 30px;
 	margin-left: -30px;
