@@ -100,6 +100,8 @@ input {
 	flex-direction: row;
 	flex-wrap: wrap;
 	margin: 0px;
+	background-color: #EDEDED;
+	margin-top: 50px;
 }
 
 #overlayInner {
@@ -186,6 +188,23 @@ input {
     top: 3%;
     right: 3%;
 
+}
+
+.closeButton {
+	font-size:xx-large;
+	background-color: rgba(75,75,75,0);
+	color: black;
+	height:40px;
+	width:50px;
+	border-width:1px;
+	border-color:black;
+	border-style: solid;
+	border-radius:50%;
+	font-weight:300;
+	transition:.5s ease;
+	position: center;
+	margin-top: 10px;
+	margin-right: 10px;
 }
 
 #keepButton{

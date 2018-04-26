@@ -112,6 +112,7 @@ function handleResponse(bookListObj) {
 			divPgh.id = "result"+divIdNumber;
 			closeButton.textContent = "X";
 			closeButton.id = "closeButton"+divIdNumber;
+			closeButton.setAttribute("class", "closeButton");
 			changeOnClick(closeButton,deleteTile,divIdNumber);
 
 			titlePgh.textContent = title;
@@ -176,15 +177,7 @@ function changeLandingPage(){
 	var bookdisplay = document.getElementById("bookDisplay");
 
 	body[0].style.backgroundColor =  "#FFFFFF";
-
 	header[0].style.width =  "15%";
-
-	bookDisplay.style.backgroundColor = "#EDEDED";
-	bookDisplay.style.width = "100%";
-	bookDisplay.style.height = "100%";
-	bookDisplay.style.bottom = "0";
-	bookDisplay.style.left = "0";
-	bookDisplay.style.right = "0";
 
 	or[0].style.display="none";
 	or[1].style.display="none";
@@ -204,11 +197,18 @@ function changeLandingPage(){
 	buttonfinal.style.marginTop = "6px";
 	buttonfinal.style.height = "42px";
 
-
 	subtitle[0].style.marginBottom = "5px";
 	subtitle[1].style.marginBottom = "5px";
 	subtitle[2].style.marginBottom = "5px";
 
+	main_f.style.position = "absolute";
+	main_f.style.left = "0";
+	main_f.style.right = "0";
+
+	bookDisplay.style.position = "absolute";
+	bookDisplay.style.marginTop = "10%";
+	bookdisplay.style.left = "0";
+	bookdisplay.style.right = "0";
 	
 }
 
@@ -353,7 +353,7 @@ function keepBook(resultNumber){
 	book.id="resultM"+uniqueTileTracker();
 	changeOnClick(closeButton,deleteTile,uniqueTileTracker.currentId);
 	document.getElementById("overlay").style.display="none";
-    book.style.margin = "10px";
+    book.style.margin = "30px";
 	bookDisplay.appendChild(book);
 
 	/*removes old search results*/
