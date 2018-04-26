@@ -28,31 +28,35 @@
 	</div>
 
 	<main>
-		Search for a book by ...
-		<br>
+		<div id="searchContainer">
+			<div id="subtitle">Search for a book by ...
+			</div
+			<br>
 
-		<div class = "main_inputs">
-			<div>
-				<p> Author </p> 
-				<input id="author" placeholder="ex William Shakespeare"> 
-			</div>
-			<p class = "or"> or </p>
+			<div class = "main_inputs">
+				<div class="authorContainer">
+					<p> Author </p> 
+					<input id="author" placeholder="ex William Shakespeare"> 
+				</div>
+				<p class = "or"> or </p>
 
-			<div>
-				<p> Title </p> 
-				<input id="title" placeholder="ex Romeo and Juliet"> 
-			</div>
-			<p class = "or"> or </p>
+				<div class="titleContainer">
+					<p> Title </p> 
+					<input id="title" placeholder="ex Romeo and Juliet"> 
+				</div>
+				<p class = "or"> or </p>
 
-			<div>
-				<p> ISBN </p> 
-				<input id="isbn" placeholder="ex 000-0-00-000000-0"> 
+				<div class="isbnContainer">
+					<p> ISBN </p> 
+					<input id="isbn" placeholder="ex 000-0-00-000000-0"> 
+				</div>
+				
 			</div>
-			
+
+			<button id = "searchbutton" onclick="newRequest()">search
+			</button>
+
 		</div>
-
-		<button id = "searchbutton" onclick="newRequest()">search
-		</button>
 
 		<div id="bookDisplay">
 		</div>

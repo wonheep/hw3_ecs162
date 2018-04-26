@@ -72,22 +72,39 @@ function handleResponse(bookListObj) {
 			var title = book.volumeInfo.title;
 			var author = book.volumeInfo.authors;
 			var description = book.volumeInfo.description;
-
-			//TODO handle cases for thumbnail being undefined
-			//if(typeof book.volumeInfo.imagesLinks != 'undefined')
-			var images = book.volumeInfo.imageLinks.thumbnail;
 			
+			//TODO handle cases for thumbnail being undefined
+		
+			if (book.volumeInfo.hasOwnProperty('imageLinks')) {
+				var images = book.volumeInfo.imageLinks.thumbnail;
+			
+			}
+			/*
+			if(book.volumeInfo.imageLinks
+				console.log("image is defined");
+				//images = book.volumeInfo.imageLinks.thumbnail;
+			else
+				console.log("image is undefined");
+			*/
+				//images = 'undefined';
 			var divPgh = document.createElement("div");
 			var titlePgh = document.createElement("p");
 			var authorPgh = document.createElement("p");
 			var descriptionPgh = document.createElement("p");
 			var imagePgh = document.createElement("img");
+			var closeButton = document.createElement("button");
+	
+			
 
 			/* ALWAYS AVOID using the innerHTML property */
 			divPgh.setAttribute("class", "each_Div");
 
 			//give unique identifiers to each div. Starts from result1
-			divPgh.id ="result"+idNumberTracker();
+			var divIdNumber = idNumberTracker();
+			divPgh.id = "result"+divIdNumber;
+			closeButton.textContent = "X";
+			closeButton.id = "closeButton"+divIdNumber;
+			changeOnClick(closeButton,deleteTile,divIdNumber);
 			titlePgh.textContent = title;
 			titlePgh.setAttribute("class", "each_Title");
 			authorPgh.textContent = author;
@@ -103,6 +120,8 @@ function handleResponse(bookListObj) {
 			overlayInner.appendChild(divPgh).append(authorPgh);
 			overlayInner.appendChild(divPgh).append(descriptionPgh);
 			overlayInner.appendChild(divPgh).append(imagePgh);
+			overlayInner.appendChild(divPgh).append(closeButton);
+			closeButton.style.display="none";
 			divPgh.style.display="none";
 		}	
 		/*show first result*/
@@ -119,10 +138,25 @@ function handleResponse(bookListObj) {
 		}
 		leftButton.style.display="none";
 		firstResult.style.display="block";
+		changeLandingPage();
 		document.getElementById("overlay").style.display="flex";
 		changeOnClick(keepButton,keepBook,1);
 
 	}
+}
+//changes from landing page view to tile page view
+function changeLandingPage(){
+	var or = document.getElementsByClassName("or");
+	var subtitle = document.getElementById("subtitle");
+	var searchContainer = document.getElementById("searchContainer");
+
+	or[0].style.display="none";
+	or[1].style.display="none";
+	subtitle.style.display="none";
+	searchContainer.style.display="flex";
+	searchContainer.style.flexDirection="row";
+	searchContainer.style.alignItems="flex-end":
+	
 }
 
 function fancyJoin(a,b) {
@@ -141,7 +175,7 @@ function emptyBookList()
 	document.getElementById("overlay").style.display="flex";
 	var divMsg = document.createElement("div");
 	var msg = document.createElement("p");
-	var lineBreak = document.createElement("br");
+	var lineBreak = document.createElement("BR");
 	var another = document.createElement("p");
 
 	divMsg.id = "emptyMessage";
@@ -231,11 +265,6 @@ function prevBook(resultNumber)
 	changeOnClick(keepButton,keepBook,resultNumber-1);
 }
 
-//X button on tile
-function removeTile(){
-
-}
-
 //X button on overlay
 function overlayGo(){
 	document.getElementById("overlay").style.display="none";
@@ -260,14 +289,21 @@ function changeOnClick(element,func,param){
 	element.onclick = noarg;
 }
 
+function deleteTile(resultNumber){
+	var book = document.getElementById("resultM"+resultNumber);
+	bookDisplay.removeChild(book);
+}
+
 function keepBook(resultNumber){
 	var bookDisplay = document.getElementById("bookDisplay");
 	var book = document.getElementById("result"+resultNumber);
+	var closeButton = document.getElementById("closeButton"+resultNumber);
+	closeButton.style.display="block";
+	book.id="resultM"+uniqueTileTracker();
+	changeOnClick(closeButton,deleteTile,uniqueTileTracker.currentId);
 	document.getElementById("overlay").style.display="none";
 	bookDisplay.appendChild(book);
 
-
-	//modify below for overlayInner
 	/*removes old search results*/
 	var overlayInner = document.getElementById("overlayInner");
 	if(overlayInner.childElementCount != 0)
@@ -304,6 +340,14 @@ function keepBook(){
 
 }
 */
+function uniqueTileTracker()
+{
+	if(typeof uniqueTileTracker.currentId == 'undefined')
+		uniqueTileTracker.currentId = 1;
+	else
+		uniqueTileTracker.currentId++;
+	return uniqueTileTracker.currentId;
+}
 
 function idNumberTracker(){
 	if(typeof idNumberTracker.currentId == 'undefined')
