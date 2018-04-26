@@ -72,11 +72,23 @@ function handleResponse(bookListObj) {
 			var title = book.volumeInfo.title;
 			var author = book.volumeInfo.authors;
 			var description = book.volumeInfo.description;
-
-			//TODO handle cases for thumbnail being undefined
-			//if(typeof book.volumeInfo.imagesLinks != 'undefined')
-			var images = book.volumeInfo.imageLinks.thumbnail;
 			
+			//TODO handle cases for thumbnail being undefined
+
+		
+			if (book.volumeInfo.hasOwnProperty('imageLinks')) {
+				var images = book.volumeInfo.imageLinks.thumbnail;
+			
+			}
+			/*
+			if(book.volumeInfo.imageLinks
+				console.log("image is defined");
+				//images = book.volumeInfo.imageLinks.thumbnail;
+			else
+				console.log("image is undefined");
+			*/
+				//images = 'undefined';
+
 			var divPgh = document.createElement("div");
 			var divimg = document.createElement("div");
 			var divtext = document.createElement("div");
@@ -84,6 +96,9 @@ function handleResponse(bookListObj) {
 			var authorPgh = document.createElement("p");
 			var descriptionPgh = document.createElement("p");
 			var imagePgh = document.createElement("img");
+			var closeButton = document.createElement("button");
+	
+			
 
 			/* ALWAYS AVOID using the innerHTML property */
 			divPgh.setAttribute("class", "each_Div");
@@ -92,7 +107,13 @@ function handleResponse(bookListObj) {
 
 
 			//give unique identifiers to each div. Starts from result1
-			divPgh.id ="result"+idNumberTracker();
+
+			var divIdNumber = idNumberTracker();
+			divPgh.id = "result"+divIdNumber;
+			closeButton.textContent = "X";
+			closeButton.id = "closeButton"+divIdNumber;
+			changeOnClick(closeButton,deleteTile,divIdNumber);
+
 			titlePgh.textContent = title;
 			titlePgh.setAttribute("class", "each_Title");
 
@@ -104,6 +125,7 @@ function handleResponse(bookListObj) {
 			imagePgh.setAttribute("alt", "img not found");
 			imagePgh.setAttribute("class", "each_Image");
 
+
 			descriptionPgh.setAttribute("class", "each_description");
 
 			//divPgh.onclick= showDivOverlay;
@@ -111,6 +133,9 @@ function handleResponse(bookListObj) {
 			overlayInner.appendChild(divPgh).appendChild(divtext).appendChild(titlePgh);
 			overlayInner.appendChild(divPgh).appendChild(divtext).appendChild(authorPgh);
 			overlayInner.appendChild(divPgh).appendChild(divtext).appendChild(descriptionPgh);
+      overlayInner.appendChild(divPgh).append(closeButton);
+      closeButton.style.display="none";
+
 			divPgh.style.display="none";
 		}	
 		/*show first result*/
@@ -126,11 +151,28 @@ function handleResponse(bookListObj) {
 			changeOnClick(rightButton,nextBook,1);
 		}
 		leftButton.style.display="none";
+
 		firstResult.style.display="flex";
+    changeLandingPage();
+
 		document.getElementById("overlay").style.display="flex";
 		changeOnClick(keepButton,keepBook,1);
 
 	}
+}
+//changes from landing page view to tile page view
+function changeLandingPage(){
+	var or = document.getElementsByClassName("or");
+	var subtitle = document.getElementById("subtitle");
+	var searchContainer = document.getElementById("searchContainer");
+
+	or[0].style.display="none";
+	or[1].style.display="none";
+	subtitle.style.display="none";
+	searchContainer.style.display="flex";
+	searchContainer.style.flexDirection="row";
+	searchContainer.style.alignItems="flex-end":
+	
 }
 
 function fancyJoin(a,b) {
@@ -149,8 +191,10 @@ function emptyBookList()
 	document.getElementById("overlay").style.display="flex";
 	var divMsg = document.createElement("div");
 	var msg = document.createElement("p");
+
 	var msg2 = document.createElement("p");
 	var lineBreak = document.createElement("br");
+
 	var another = document.createElement("p");
 	var bold = document.createElement("b");
 
@@ -159,7 +203,9 @@ function emptyBookList()
 	msg2.textContent = inputVars.title;
 	msg2.style.fontWeight = "bold";
 	/*TODO fix bold of authors,title,isbn*/
+
 	msg.textContent = "The book " + msg2.textContent + " by " + inputVars.author + " or ISBN number " + inputVars.isbn + " could not be found.";
+
 
 
 	another.textContent = "Try another search";
@@ -168,19 +214,6 @@ function emptyBookList()
 	document.getElementById("overlayInner").appendChild(divMsg).append(another);
 
 }
-
-/*clone the div clicked and add it into the overlay*/
-/*
-function showDivOverlay(){
-	//remove old overlay node
-	var overlayInner = document.getElementById("overlayInner");
-  overlayInner.removeChild(overlayInner.firstChild);
-	var div = this;
-	var divClone = div.cloneNode(true);
-	document.getElementById("overlay").style.display="flex";
-	document.getElementById("overlayInner").appendChild(divClone);
-}
-*/
 
 /*resultNumber is the id number of the current book
   nextbook updates the current tile to the nextbook
@@ -197,6 +230,7 @@ function nextBook(resultNumber)
 	
 	curBookItem.style.display="none";
 	nextBookItem.style.display="flex";
+
 
 
 	//new right button, no button if nextBook is last item in list
@@ -230,6 +264,7 @@ function prevBook(resultNumber)
 	curBookItem.style.display="none";
 	prevBookItem.style.display="flex";
 
+
 	//new right button
 	rightButton.style.display="block";
 	changeOnClick(rightButton,nextBook,resultNumber-1);
@@ -243,10 +278,6 @@ function prevBook(resultNumber)
 	changeOnClick(keepButton,keepBook,resultNumber-1);
 }
 
-//X button on tile
-function removeTile(){
-
-}
 
 //X button on overlay
 function overlayGo(){
@@ -272,15 +303,22 @@ function changeOnClick(element,func,param){
 	element.onclick = noarg;
 }
 
+function deleteTile(resultNumber){
+	var book = document.getElementById("resultM"+resultNumber);
+	bookDisplay.removeChild(book);
+}
+
 function keepBook(resultNumber){
 	var bookDisplay = document.getElementById("bookDisplay");
 	var book = document.getElementById("result"+resultNumber);
+	var closeButton = document.getElementById("closeButton"+resultNumber);
+	closeButton.style.display="block";
+	book.id="resultM"+uniqueTileTracker();
+	changeOnClick(closeButton,deleteTile,uniqueTileTracker.currentId);
 	document.getElementById("overlay").style.display="none";
-	book.style.margin = "30px";
+  book.style.margin = "30px";
 	bookDisplay.appendChild(book);
 
-
-	//modify below for overlayInner
 	/*removes old search results*/
 	var overlayInner = document.getElementById("overlayInner");
 	if(overlayInner.childElementCount != 0)
@@ -294,27 +332,15 @@ function keepBook(resultNumber){
 	idNumberTracker.currentId = 0;
 }
 
-/*
-function keepBook(){
-	
-	var bookDisplay = document.getElementById("bookDisplay");
-	var div = this;
-	var divClone = div.cloneNode(true);
-	document.getElementById("overlay").style.display="none";
-	bookDisplay.appendChild(divClone);
-		//removes old search results
-		
-		var bookDisplay = document.getElementById("bookDisplay");
-		if(bookDisplay.childElementCount != 0)
-		{
-			while(bookDisplay.firstChild)
-			{
-				bookDisplay.removeChild(bookDisplay.firstChild);
-			}
-		}
-		
+function uniqueTileTracker()
+{
+	if(typeof uniqueTileTracker.currentId == 'undefined')
+		uniqueTileTracker.currentId = 1;
+	else
+		uniqueTileTracker.currentId++;
+	return uniqueTileTracker.currentId;
+
 }
-*/
 
 function idNumberTracker(){
 	if(typeof idNumberTracker.currentId == 'undefined')

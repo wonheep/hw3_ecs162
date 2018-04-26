@@ -232,6 +232,7 @@ input {
     transition: .5s ease;
     top: 40%;
     right: 10%;
+
 }
 
 #emptyMessage{
@@ -241,7 +242,6 @@ input {
 	height: 300px;
 	text-align:center;
 }
-
 
 @media screen and (max-width:480px) {
 
@@ -310,4 +310,5 @@ input {
 @media screen and (min-width:481px) {
 
 }
+
 
