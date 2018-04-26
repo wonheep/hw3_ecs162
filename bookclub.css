@@ -100,6 +100,8 @@ input {
 	flex-direction: row;
 	flex-wrap: wrap;
 	margin: 0px;
+	background-color: #EDEDED;
+	margin-top: 50px;
 }
 
 #overlayInner {
@@ -113,8 +115,8 @@ input {
 	background-color: white;
 	border: 1px;
 	color: black;
-	width: 700px;
-	height: 500px;
+	width: 600px;
+	height: 400px;
 	margin: 20px;
 	margin-top: 25%;
 	/*position: absolute;
@@ -129,17 +131,17 @@ input {
 .each_divimage {
 	max-height: 44vh;
 	width: 60%;
-	padding: 30px;
+	padding: 28px;
 }
 
 .each_divimage img {
 	width: 100%;
-	max-height: 44vh;
+	max-height: 35vh;
 
 }
 
 .each_divtext {
-	max-height: 44vh;
+	max-height: 300px;
 	width: 60%;
 	padding: 30px;
 	margin-left: -30px;
@@ -148,6 +150,7 @@ input {
 .each_Title {
 	font-size: xx-large;
 	font-weight: 700;
+	margin-top: 0px;
 }
 
 .each_Author {
@@ -165,7 +168,7 @@ input {
 	font-weight: 300;
 	overflow: hidden;
 	display: -webkit-box;
-	-webkit-line-clamp: 6;
+	-webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
 	text-overflow: ellipsis;
 }
@@ -186,6 +189,23 @@ input {
     top: 3%;
     right: 3%;
 
+}
+
+.closeButton {
+	font-size:xx-large;
+	background-color: rgba(75,75,75,0);
+	color: black;
+	height:40px;
+	width:50px;
+	border-width:1px;
+	border-color:black;
+	border-style: solid;
+	border-radius:50%;
+	font-weight:300;
+	transition:.5s ease;
+	position: center;
+	margin-top: 10px;
+	margin-right: 10px;
 }
 
 #keepButton{

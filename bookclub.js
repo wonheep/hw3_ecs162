@@ -112,6 +112,7 @@ function handleResponse(bookListObj) {
 			divPgh.id = "result"+divIdNumber;
 			closeButton.textContent = "X";
 			closeButton.id = "closeButton"+divIdNumber;
+			closeButton.setAttribute("class", "closeButton");
 			changeOnClick(closeButton,deleteTile,divIdNumber);
 
 			titlePgh.textContent = title;
@@ -153,7 +154,7 @@ function handleResponse(bookListObj) {
 		leftButton.style.display="none";
 
 		firstResult.style.display="flex";
-    changeLandingPage();
+    	changeLandingPage();
 
 		document.getElementById("overlay").style.display="flex";
 		changeOnClick(keepButton,keepBook,1);
@@ -163,15 +164,51 @@ function handleResponse(bookListObj) {
 //changes from landing page view to tile page view
 function changeLandingPage(){
 	var or = document.getElementsByClassName("or");
-	var subtitle = document.getElementById("subtitle");
-	var searchContainer = document.getElementById("searchContainer");
+	var searchBy = document.getElementById("search_by");
+	var searchContainer = document.getElementsByClassName("main_inputs");
+	var searchButton = document.getElementById("button_central");
+	var subtitle = document.getElementsByClassName("subtitle");
+	var buttonfinal = document.getElementById("searchbutton");
+	var main_f = document.getElementById("main_f");
+	var overlay = document.getElementById("overlayInner");
+
+	var body = document.getElementsByTagName("body");
+	var header = document.getElementsByTagName("header");
+	var bookdisplay = document.getElementById("bookDisplay");
+
+	body[0].style.backgroundColor =  "#FFFFFF";
+	header[0].style.width =  "15%";
 
 	or[0].style.display="none";
 	or[1].style.display="none";
-	subtitle.style.display="none";
-	searchContainer.style.display="flex";
-	searchContainer.style.flexDirection="row";
-	searchContainer.style.alignItems="flex-end":
+	searchBy.style.display="none";
+	searchContainer[0].style.display="flex";
+	searchContainer[0].style.flexDirection="row";
+	searchContainer[0].style.alignItems="flex-end";
+	searchContainer[0].style.position="absolute";
+	searchContainer[0].style.right="0";
+	searchContainer[0].style.top="0";
+	searchContainer[0].style.marginTop = "20px";
+	searchContainer[0].appendChild(searchButton);
+
+	buttonfinal.style.position = "absolute";
+	buttonfinal.style.right = "0";
+	buttonfinal.style.marginRight = "20px";
+	buttonfinal.style.marginTop = "6px";
+	buttonfinal.style.height = "42px";
+
+	subtitle[0].style.marginBottom = "5px";
+	subtitle[1].style.marginBottom = "5px";
+	subtitle[2].style.marginBottom = "5px";
+
+	main_f.style.position = "absolute";
+	main_f.style.left = "0";
+	main_f.style.right = "0";
+
+	bookDisplay.style.position = "absolute";
+	bookDisplay.style.marginTop = "10%";
+	bookdisplay.style.left = "0";
+	bookdisplay.style.right = "0";
 	
 }
 
@@ -316,7 +353,7 @@ function keepBook(resultNumber){
 	book.id="resultM"+uniqueTileTracker();
 	changeOnClick(closeButton,deleteTile,uniqueTileTracker.currentId);
 	document.getElementById("overlay").style.display="none";
-  book.style.margin = "30px";
+    book.style.margin = "30px";
 	bookDisplay.appendChild(book);
 
 	/*removes old search results*/
