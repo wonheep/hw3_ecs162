@@ -78,6 +78,8 @@ function handleResponse(bookListObj) {
 			var images = book.volumeInfo.imageLinks.thumbnail;
 			
 			var divPgh = document.createElement("div");
+			var divimg = document.createElement("div");
+			var divtext = document.createElement("div");
 			var titlePgh = document.createElement("p");
 			var authorPgh = document.createElement("p");
 			var descriptionPgh = document.createElement("p");
@@ -90,18 +92,22 @@ function handleResponse(bookListObj) {
 			divPgh.id ="result"+idNumberTracker();
 			titlePgh.textContent = title;
 			titlePgh.setAttribute("class", "each_Title");
+
 			authorPgh.textContent = author;
-			titlePgh.setAttribute("class", "each_Author");
+			authorPgh.setAttribute("class", "each_Author");
+
 			descriptionPgh.textContent = description;
 			imagePgh.src = images;
 			imagePgh.setAttribute("alt", "img not found");
-			titlePgh.setAttribute("class", "each_Image");
+			imagePgh.setAttribute("class", "each_Image");
+
+			descriptionPgh.setAttribute("class", "each_description");
 
 			//divPgh.onclick= showDivOverlay;
-			overlayInner.appendChild(divPgh).append(imagePgh);
-			overlayInner.appendChild(divPgh).append(titlePgh);
-			overlayInner.appendChild(divPgh).append(authorPgh);
-			overlayInner.appendChild(divPgh).append(descriptionPgh);
+			overlayInner.appendChild(divPgh).appendChild(divimg).appendChild(imagePgh);
+			overlayInner.appendChild(divPgh).appendChild(divtext).appendChild(titlePgh);
+			overlayInner.appendChild(divPgh).appendChild(divtext).appendChild(authorPgh);
+			overlayInner.appendChild(divPgh).appendChild(divtext).appendChild(descriptionPgh);
 			divPgh.style.display="none";
 		}	
 		/*show first result*/
@@ -150,7 +156,7 @@ function emptyBookList()
 	msg2.textContent = inputVars.title;
 	msg2.style.fontWeight = "bold";
 	/*TODO fix bold of authors,title,isbn*/
-	msg.textContent = "The book " + msg2.textContent.bold() + " by " + inputVars.author + " or ISBN number " + inputVars.isbn + " could not be found.";
+	msg.textContent = "The book " + msg2.textContent + " by " + inputVars.author + " or ISBN number " + inputVars.isbn + " could not be found.";
 
 
 	another.textContent = "Try another search";
