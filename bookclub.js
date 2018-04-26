@@ -153,7 +153,7 @@ function handleResponse(bookListObj) {
 		leftButton.style.display="none";
 
 		firstResult.style.display="flex";
-    changeLandingPage();
+    	changeLandingPage();
 
 		document.getElementById("overlay").style.display="flex";
 		changeOnClick(keepButton,keepBook,1);
@@ -163,15 +163,17 @@ function handleResponse(bookListObj) {
 //changes from landing page view to tile page view
 function changeLandingPage(){
 	var or = document.getElementsByClassName("or");
-	var subtitle = document.getElementById("subtitle");
-	var searchContainer = document.getElementById("searchContainer");
+	var searchBy = document.getElementById("search_by");
+	var searchContainer = document.getElementsByClassName("main_inputs");
+	var searchButton = document.getElementById("button_central");
 
 	or[0].style.display="none";
 	or[1].style.display="none";
-	subtitle.style.display="none";
-	searchContainer.style.display="flex";
-	searchContainer.style.flexDirection="row";
-	searchContainer.style.alignItems="flex-end":
+	searchBy.style.display="none";
+	searchContainer[0].style.display="flex";
+	searchContainer[0].style.flexDirection="row";
+	searchContainer[0].style.alignItems="flex-end";
+	searchContainer[0].appendChild(searchButton);
 	
 }
 
