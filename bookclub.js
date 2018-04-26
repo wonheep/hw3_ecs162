@@ -87,6 +87,9 @@ function handleResponse(bookListObj) {
 
 			/* ALWAYS AVOID using the innerHTML property */
 			divPgh.setAttribute("class", "each_Div");
+			divimg.setAttribute("class", "each_divimage");
+			divtext.setAttribute("class", "each_divtext");
+
 
 			//give unique identifiers to each div. Starts from result1
 			divPgh.id ="result"+idNumberTracker();
@@ -123,7 +126,7 @@ function handleResponse(bookListObj) {
 			changeOnClick(rightButton,nextBook,1);
 		}
 		leftButton.style.display="none";
-		firstResult.style.display="block";
+		firstResult.style.display="flex";
 		document.getElementById("overlay").style.display="flex";
 		changeOnClick(keepButton,keepBook,1);
 
@@ -193,7 +196,7 @@ function nextBook(resultNumber)
 	var nextBookItem = document.getElementById("result"+(resultNumber+1));
 	
 	curBookItem.style.display="none";
-	nextBookItem.style.display="block";
+	nextBookItem.style.display="flex";
 
 
 	//new right button, no button if nextBook is last item in list
@@ -225,7 +228,7 @@ function prevBook(resultNumber)
 	var prevBookItem = document.getElementById("result"+(resultNumber-1));
 	
 	curBookItem.style.display="none";
-	prevBookItem.style.display="block";
+	prevBookItem.style.display="flex";
 
 	//new right button
 	rightButton.style.display="block";
@@ -273,6 +276,7 @@ function keepBook(resultNumber){
 	var bookDisplay = document.getElementById("bookDisplay");
 	var book = document.getElementById("result"+resultNumber);
 	document.getElementById("overlay").style.display="none";
+	book.style.margin = "30px";
 	bookDisplay.appendChild(book);
 
 
