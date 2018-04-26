@@ -91,14 +91,14 @@ input {
 	z-index:2;
 	background-color:rgba(75,75,75,.8);
 	display:none;
-	align-items:center;
+	align-items: center;
 	flex-direction: column;
 }
 
 #overlayInner {
 	display: flex;
 	flex-direction: row;
-	padding-top: 15%;
+
 }
 
 .each_Div {
@@ -110,18 +110,32 @@ input {
 	width: 700px;
 	height: 500px;
 	margin: 20px;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
-.each_Div p {
-	width: 10%;
-}
-
-.each_Div img {
+.each_divimage {
 	max-height: 44vh;
-	width: 45%;
+	width: 60%;
 	padding: 30px;
 }
 
+.each_divimage img {
+	width: 100%;
+	max-height: 44vh;
+
+}
+
+.each_divtext {
+	max-height: 44vh;
+	width: 60%;
+	padding: 30px;
+	margin-left: -30px;
+}
 
 .each_Title {
 	font-size: xx-large;
@@ -175,7 +189,7 @@ input {
     border-radius: 10px;
     height: 40px;
     width: 110px;
-    margin-top: 30px;
+    margin-top: 800px;
 }
 
 #leftButton{
