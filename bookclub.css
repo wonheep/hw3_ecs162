@@ -4,72 +4,106 @@ body {
 	background-color: #FFFFFF;
 	display: flex;
 	flex-direction: column;
-	/*background-color:rgb(240,240,240);*/
-	padding-left: 20px;
+	justify-content:space-between;
+	/*padding-left: 20px; */
+	/*align-items:center;*/
 }
 
 h1 {
-
-   font-size: xx-large;
-   font-weight: 700;
-   color: #4A73FF;
+	background-color:red;
+	font-size: xx-large;
+    font-weight: 700;
+    color: #4A73FF;
+    margin-left:30px;
 }
 
 main {
+	background-color:green;
+	/*align-self: center;*/
+    flex: 1 0 auto; /* the sticky footer trick without the footer */
+    /*padding-top: 20px; */
+    display:flex;
+    flex-direction:column;
+   	/*align-items:center;*/
+}
+
+#headerAndMainInputs{
+	display:flex;
 	align-self: center;
-    flex: 1 0 auto;  /* the sticky footer trick without the footer */
-    padding-top: 20px;
+	background-color:orange;
+}
+
+#allInputContainers{
+	display:flex;
+	align-items:flex-end;
+	background-color:purple;
 }
 
 #search_by {
+	align-self:flex-start;
+	background-color:grey;
 	font-size: xx-large;
 	font-weight: 300;
-	margin-left: 0px;
+	/*margin-left: 0px;*/
 }	
 
 .main_inputs {
+	background-color:yellow;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+}
+
+.inputContainer{
+	background-color:pink;
+	margin:10px;
 }
 
 .subtitle {
+	background-color:red;
 	font-size: x-large;
 	color: #4A73FF;
 	font-weight: 300;
 }
 
-.main_inputs div {
+/*.main_inputs div {
 	margin-top: -50px;
 	padding-right: 25px;
-}
+}*/
 
 input {
 	border-width: 1.6px;
 	border-color: #4A73FF;
-	height: 40px;
-	width: 280px;
+/*	height: 40px;
+	width: 280px;*/
+	height:25%;
+	width:100%;
 	border-style: solid;
 	border-radius: 10px;
 	font-size: x-large;
 	font-weight: 300;
+
 }
 
 .or {
-	align-self: center;
+	/*align-self: center;*/
+/*	background-color:purple;*/
 	font-size: x-large;
 	font-weight: 700;
 	color: #4A73FF;
-	margin-top: 35px;
-	margin-left: -10px;
-	margin-right: 15px;
+	/*margin-top: 35px;*/
+/*	margin-left: -10px;
+	margin-right: 15px;*/
 }
 
-#button_central {
+/*#button_central {
+	background-color: red;
 	text-align: center;
 	margin: 50px;
-}
+}*/
 
-#searchbutton {
+.blueButtons {
+	align-self:center;
+	margin-top:50px;
 	background-color: #4A73FF;
     font-size: large;
     font-weight: 300;
@@ -82,11 +116,14 @@ input {
 
 #overlay{
 	position:fixed;
-    padding:0;
+  /*  padding:0;
     margin:0;
     top:0;
     left:0;
-    width: 100%;
+*/    
+	top:0;
+	left:0;
+	width: 100%;
     height: 100%;
 	z-index:2;
 	background-color:rgba(75,75,75,.8);
@@ -96,29 +133,54 @@ input {
 }
 
 #bookDisplay {
-	display: flex;
+	background-color: #EDEDED;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	/*display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	margin: 0px;
 	background-color: #EDEDED;
-	margin-top: 50px;
+	margin-top: 50px;*/
+}
+
+#overlayInnerAndButtonsContainer{
+	background-color:red;
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+
 }
 
 #overlayInner {
-	display: flex;
+	display:flex;
+	background-color:blue;
+	width:550px;
+	height:400px;
+
+	/*display: flex;
 	flex-direction: row;
+	*/
 }
 
 .each_Div {
 	display: flex;
 	flex-direction: row;
 	background-color: white;
-	border: 1px;
+	width:550px;
+	height:400px;
+	box-shadow:5px 5px 5px grey;
+/*	margin:30px;*/
+	/*border: 1px;*/
+	/*
 	color: black;
 	width: 600px;
 	height: 400px;
 	margin: 20px;
 	margin-top: 25%;
+	*/
+
 	/*position: absolute;
 	margin: auto;
 	top: 0;
@@ -129,51 +191,85 @@ input {
 }
 
 .each_divimage {
-	max-height: 44vh;
-	width: 60%;
-	padding: 28px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	background-color:blue;
+	height:100%;
+	width: 50%;
+/*	margin:auto;*/
+	/*padding:10px;*/
 }
 
 .each_divimage img {
-	width: 100%;
-	max-height: 35vh;
+	width: 90%;
+	height:90%;
+/*	flex:1 1 auto;*/
+	/*max-height: 35vh;*/
 
 }
 
 .each_divtext {
-	max-height: 300px;
-	width: 60%;
-	padding: 30px;
-	margin-left: -30px;
+	display:flex;
+	align-content: center;
+	flex-direction:column;
+	background-color:yellow;
+	height:100%;
+	width: 50%;
+/*	padding: 30px;
+	margin-left: -30px;*/
 }
 
 .each_Title {
+	background-color:purple;
 	font-size: xx-large;
 	font-weight: 700;
-	margin-top: 0px;
+	margin-top:40px;
+	margin-bottom:10px;
+	margin-left:10px;
+
+	flex:0 0 20%;
+	overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+    text-overflow: ellipsis;
 }
 
 .each_Author {
+	background-color:green;
 	font-size: xx-large;
 	font-weight: 400;
-}
+	margin-top:0px;
+	margin-bottom:0px;
+	margin-left:10px;
 
-.each_Author {
-	font-size: xx-large;
-	font-weight: 400;
+	flex:0 0 20%;
+	overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+    text-overflow: ellipsis;
 }
 
 .each_description {
+	background-color:pink;
 	font-size: x-large;
 	font-weight: 300;
-	overflow: hidden;
-	display: -webkit-box;
-	-webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
-	text-overflow: ellipsis;
+	margin-left:10px;
+	margin-top:30px;
+	margin-bottom:20px;
+
+	flex: 0 0 auto;
+ 	overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;  
+    text-overflow: ellipsis;
 }
 
 #close {
+	align-self:flex-end;
 	font-size:xx-large;
 	background-color: rgba(75,75,75,0);
 	color: white;
@@ -184,11 +280,16 @@ input {
 	border-style: solid;
 	border-radius: 50%;
 	font-weight: 300;
+
+	margin-right:75px;
+	margin-top:75px;
+
+	/*
 	position:absolute;
     transition: .5s ease;
     top: 3%;
     right: 3%;
-
+	*/
 }
 
 .closeButton {
@@ -208,19 +309,9 @@ input {
 	margin-right: 10px;
 }
 
-#keepButton{
-    background-color: #4A73FF;
-    font-size: large;
-    font-weight: 300;
-    color: #FFFFFF;
-  	border: 0;
-    border-radius: 10px;
-    height: 40px;
-    width: 110px;
-    margin-bottom: 0px;
-}
 
-#leftButton{
+
+/*#leftButton{
 	font-size:50px;
 	background-color: rgba(75,75,75,0);
 	color: white;
@@ -235,9 +326,9 @@ input {
     transition: .5s ease;
     top: 40%;
     left: 10%;
-}
+}*/
 
-#rightButton{
+.arrowButton{	
 	font-size:50px;
 	background-color: rgba(75,75,75,0);
 	color: white;
@@ -248,44 +339,127 @@ input {
 	border-style: solid;
 	border-radius: 10px;
 	font-weight: 300;
+	margin:30px;
+}
+
+/*#rightButton{
+	font-size:50px;
+	background-color: rgba(75,75,75,0);
+	color: white;
+	border-width: 2px;
+	border-color: white;
+	height: 65px;
+	width: 80px;
+	border-style: solid;
+	border-radius: 10px;
+	font-weight: 300;
+	margin-left:30px;
+
+	
 	position:absolute;
     transition: .5s ease;
     top: 40%;
     right: 10%;
+	
+}*/
 
+.boldWords{
+	font-size:xx-large;
+	color:white;
+	font-weight:700;
+	margin-left:5px;
+	margin-right:5px;
 }
 
 #emptyMessage{
+	font-size:xx-large;
+	background-color:black;
 	color:white;
-	border: 1px;
+	width:100%;
+	height:100%;
+	text-align:center;
+
+
+	/*border: 1px;
 	width: 500px;
 	height: 300px;
-	text-align:center;
+	text-align:center;*/
 }
 
+
 @media screen and (max-width:480px) {
+	
+	#search_by {
+		align-self:center;
+	}
 
 	header {
 	   align-self: center;
 	}
 
-	.main_inputs {
+	#allInputContainers{
+		flex-direction:column;
+
+	}
+
+	.subtitle{
+		margin-top:0px;
+	}
+
+	.inputContainer{
+		margin-top:0px;
+	}
+
+	.or{
+		margin:-20px;
+	}
+
+	#overlayInner{
+		width:480px;
+		height:400px;
+	}
+
+	main{
+		width:100vw;
+	}
+	#bookDisplay{
+		width:100vw;
+		align-self:center;
+		flex-direction: column;
+		/*height:400px;*/
+	}
+
+	#overlayInnerAndButtonsContainer{
+		flex-direction:column;
+	}
+
+	.bookDisplayBook{
+		width:480px;
+		height:400px;
+		margin-right:0px;
+		margin-left:0px;
+		margin-bottom:0px;
+		margin-top:10px;
+	}
+
+	#close{
+		margin-top:25px;
+		margin-right:25px;
+		margin-bottom:25px;
+	}
+	/*.main_inputs {
 		display: flex;
 		flex-direction: column;
-		align-self: center;
-	}
+	}*/
 
-	.main_inputs div {
-		margin-top: -50px;
-		margin-bottom: -20px;
-	}
 
-	main {
+
+/*	main {
 		padding-left: 50px;
-	}
+	}*/
 
 
-	input {
+/*	input {
 		border-width: 2px;
 		border-color: #4A73FF;
 		height: 40px;
@@ -296,25 +470,25 @@ input {
 		font-weight: 300;
 		margin-top: -20px;
 		margin-bottom: 10px;
-	}
+	}*/
 
 	.or {
 		align-self: center;
 		font-size: x-large;
-		font-weight: 700;
+/*		font-weight: 700;
 		color: #4A73FF;
 		margin-top: 20px;
 		margin-bottom: 10px;
-		margin-left: -50px;
+		margin-left: -50px;*/
 
 	}
 
-	#button_central {
+/*	#button_central {
 		text-align: center;
 		margin-left: 0px;
-	}
+	}*/
 
-	#searchbutton {
+/*	#searchbutton {
 		background-color: #4A73FF;
 	    font-size: large;
 	    font-weight: 300;
@@ -323,7 +497,7 @@ input {
 	    border-radius: 10px;
 	    height: 40px;
 	    width: 300px;
-	}
+	}*/
 
 }
 
